@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Andy的个人主页</title>
+  <subtitle>My name is andy</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2017-06-26T11:55:15.493Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>郭文明(Andy)</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>幸福其实很简单</title>
+    <link href="http://yoursite.com/2017/06/16/page2/"/>
+    <id>http://yoursite.com/2017/06/16/page2/</id>
+    <published>2017-06-16T15:19:47.000Z</published>
+    <updated>2017-06-26T11:55:15.493Z</updated>
+    
+    <content type="html"><![CDATA[<p><center>人的一生，<br>总不是想象中的那么好，<br>每个人的背后都会有辛酸，<br>都会有无法言说的艰难。<br>每个人都会有自己的泪要擦，<br>都会有自己的路要走。<br><a id="more"></a></center></p>
+<hr>
+<p><center>只要记得，<br>冷了给自己加件外衣；<br>饿了给自己买个面包，<br>痛了给自己一份坚强；<br>失败了给自己一个目标，<br>跌倒了在伤痛中爬起，<br>给自己一个宽容的微笑继续往前走，<br>做最真实的自己。</center></p>
+<hr>
+<p><center>不要以自己的标准来要求别人，<br>也不要戴着有色眼镜看人。<br>因为每个人都有自己的喜好<br>和个性以及价值。<br>你看不惯的事情，并不一定就是不好。<br>幸福的理解有千万种，每人的诠释也不同，</center></p>
+<hr>
+<p><center>幸福是一点一点积累的，<br>是一天一天经营的。<br>不要去伤害喜欢你的人，<br>也不要让你喜欢的人受伤害。<br>一个人就算再好，<br>但不愿陪你到老，那他就是过客。<br>一个人缺点再多，但能处处忍让你，<br>愿意陪你到最后，就是幸福。<br>人人都想找个十全十美的爱人，可人总有缺点。<br>爱就是相互忍让，彼此真诚，共度一生。<br>有个让你一辈子开心的人，才是生活的目标。</center></p>
+<hr>
+<p><center>当一切拥有和执着成为一种伤害时，<br>放弃便是最好的归宿。<br>谁又能理解谁的多少痛苦；<br>谁又能懂得谁的多少伤痛，<br>泪，没挂在谁的脸上，<br>谁不知道它的冰凉；<br>伤，不在谁的身上，<br>谁不知道它的分量，<br>或许，你能看到眼中的泪花，<br>却不一定能读懂心中的悲凉，<br>或许，你能看到身上的伤疤，<br>却不一定能理解心中的忧伤，<br>在落泪以前转身离去，<br>留下华丽的背影，让心灵轻松地上路。</center></p>
+<hr>
+<p><center>遇人多了就知道友情的可贵。<br>遇事多了就知道理解的可贵。<br>失败多了就知道心态的可贵。<br>成功多了就知道勇气的可贵。<br>矛盾多了就知道胸怀的可贵。<br>不顺眼多了就知道修养的可贵。<br>恭维多了才知道真诚的可贵。<br>名利多了才知道淡定的可贵。<br>应酬多了才知道清净的可贵。</center></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;center&gt;人的一生，&lt;br&gt;总不是想象中的那么好，&lt;br&gt;每个人的背后都会有辛酸，&lt;br&gt;都会有无法言说的艰难。&lt;br&gt;每个人都会有自己的泪要擦，&lt;br&gt;都会有自己的路要走。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="life" scheme="http://yoursite.com/categories/life/"/>
+    
+    
+      <category term="随笔" scheme="http://yoursite.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HTML+CSS+DIV基础知识</title>
+    <link href="http://yoursite.com/2017/06/16/qdbj/"/>
+    <id>http://yoursite.com/2017/06/16/qdbj/</id>
+    <published>2017-06-16T15:01:21.000Z</published>
+    <updated>2017-06-16T15:14:58.296Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="随笔" scheme="http://yoursite.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+      <category term="前端笔记" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>wordpress</title>
+    <link href="http://yoursite.com/2017/06/16/wordpress/"/>
+    <id>http://yoursite.com/2017/06/16/wordpress/</id>
+    <published>2017-06-16T14:16:14.000Z</published>
+    <updated>2017-06-16T14:47:20.926Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="WordPress模板基本文件"><a href="#WordPress模板基本文件" class="headerlink" title="WordPress模板基本文件"></a>WordPress模板基本文件</h2><p>style.css 样式表文件<br>index.php 主页文件<br>single.php 日志单页文件<br>page.php 页面文件<br>archvie.php 分类和日期存档页文件<br>searchform.php 搜索表单文件<br>search.php 搜索页面文件<br>comments.php 留言区域文件(包括留言列表和留言框)<br>404.php 404错误页面<br>header.php 网页头部文件<br>sidebar.php 网页侧边栏文件<br>footer.php 网页底部文件</p>
+<h2 id="WordPress-Header头部-PHP代码"><a href="#WordPress-Header头部-PHP代码" class="headerlink" title="WordPress Header头部 PHP代码"></a>WordPress Header头部 PHP代码</h2><a id="more"></a>
+<p>注: 也就是位于<head>和</head>之间的PHP代码</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;?php</span> bloginfo(’name’); <span class="meta">?&gt;</span> 网站标题</div><div class="line"></div><div class="line"><span class="meta">&lt;?php</span> wp_title(); <span class="meta">?&gt;</span> 日志或页面标题</div><div class="line"><span class="meta">&lt;?php</span> bloginfo(’stylesheet_url’); <span class="meta">?&gt;</span> WordPress主题样式表文件style.css的相对地址</div><div class="line"><span class="meta">&lt;?php</span> bloginfo(’pingback_url’); <span class="meta">?&gt;</span> WordPress博客的Pingback地址</div><div class="line"><span class="meta">&lt;?php</span> bloginfo(’template_url’); <span class="meta">?&gt;</span> WordPress主题文件的相对地址</div><div class="line"><span class="meta">&lt;?php</span> bloginfo(’version’); <span class="meta">?&gt;</span> 博客的WordPress版本</div><div class="line"><span class="meta">&lt;?php</span> bloginfo(’atom_url’); <span class="meta">?&gt;</span> WordPress博客的Atom地址</div><div class="line"><span class="meta">&lt;?php</span> bloginfo(’rss2_url’); <span class="meta">?&gt;</span> WordPress博客的RSS2地址</div><div class="line"><span class="meta">&lt;?php</span> bloginfo(’url’); <span class="meta">?&gt;</span> WordPress博客的绝对地址</div><div class="line"><span class="meta">&lt;?php</span> bloginfo(’name’); <span class="meta">?&gt;</span> WordPress博客的名称</div><div class="line"><span class="meta">&lt;?php</span> bloginfo(’html_type’); <span class="meta">?&gt;</span> 网站的HTML版本</div><div class="line"><span class="meta">&lt;?php</span> bloginfo(’charset’); <span class="meta">?&gt;</span> 网站的字符编码格式</div></pre></td></tr></table></figure>
+<p>WordPress 主体模板 PHP代码</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;?php</span> the_content(); <span class="meta">?&gt;</span> 日志内容</div><div class="line"><span class="meta">&lt;?php</span> <span class="keyword">if</span>(have_posts()) : <span class="meta">?&gt;</span> 确认是否有日志</div><div class="line"><span class="meta">&lt;?php</span> <span class="keyword">while</span>(have_posts()) : the_post(); <span class="meta">?&gt;</span> 如果有，则显示全部日志</div><div class="line"><span class="meta">&lt;?php</span> <span class="keyword">endwhile</span>; <span class="meta">?&gt;</span> 结束PHP函数”<span class="keyword">while</span>”</div><div class="line"><span class="meta">&lt;?php</span> <span class="keyword">endif</span>; <span class="meta">?&gt;</span> 结束PHP函数”<span class="keyword">if</span>”</div><div class="line"><span class="meta">&lt;?php</span> get_header(); <span class="meta">?&gt;</span> header.php文件的内容</div><div class="line"><span class="meta">&lt;?php</span> get_sidebar(); <span class="meta">?&gt;</span> sidebar.php文件的内容</div><div class="line"><span class="meta">&lt;?php</span> get_footer(); <span class="meta">?&gt;</span> footer.php文件的内容</div><div class="line"><span class="meta">&lt;?php</span> the_time(’m-d-y’) <span class="meta">?&gt;</span> 显示格式为”<span class="number">02</span><span class="number">-19</span><span class="number">-08</span>″的日期</div><div class="line"><span class="meta">&lt;?php</span> comments_popup_link(); <span class="meta">?&gt;</span> 显示一篇日志的留言链接</div><div class="line"><span class="meta">&lt;?php</span> the_title(); <span class="meta">?&gt;</span> 显示一篇日志或页面的标题</div><div class="line"><span class="meta">&lt;?php</span> the_permalink() <span class="meta">?&gt;</span> 显示一篇日志或页面的永久链接/URL地址</div><div class="line"><span class="meta">&lt;?php</span> the_category(’, ‘) <span class="meta">?&gt;</span> 显示一篇日志或页面的所属分类</div><div class="line"><span class="meta">&lt;?php</span> the_author(); <span class="meta">?&gt;</span> 显示一篇日志或页面的作者</div><div class="line"><span class="meta">&lt;?php</span> the_ID(); <span class="meta">?&gt;</span> 显示一篇日志或页面的ID</div><div class="line"><span class="meta">&lt;?php</span> edit_post_link(); <span class="meta">?&gt;</span> 显示一篇日志或页面的编辑链接</div><div class="line"><span class="meta">&lt;?php</span> get_links_list(); <span class="meta">?&gt;</span> 显示Blogroll中的链接</div><div class="line"><span class="meta">&lt;?php</span> comments_template(); <span class="meta">?&gt;</span> comments.php文件的内容</div><div class="line"><span class="meta">&lt;?php</span> wp_list_pages(); <span class="meta">?&gt;</span> 显示一份博客的页面列表</div><div class="line"><span class="meta">&lt;?php</span> wp_list_cats(); <span class="meta">?&gt;</span> 显示一份博客的分类列表</div><div class="line"><span class="meta">&lt;?php</span> next_post_link(’ %link ‘) <span class="meta">?&gt;</span> 下一篇日志的URL地址</div><div class="line"><span class="meta">&lt;?php</span> previous_post_link(’%link’) <span class="meta">?&gt;</span> 上一篇日志的URL地址</div><div class="line"><span class="meta">&lt;?php</span> get_calendar(); <span class="meta">?&gt;</span> 调用日历</div><div class="line"><span class="meta">&lt;?php</span> wp_get_archives() <span class="meta">?&gt;</span> 显示一份博客的日期存档列表</div><div class="line"><span class="meta">&lt;?php</span> posts_nav_link(); <span class="meta">?&gt;</span></div></pre></td></tr></table></figure>
+<p> 显示较新日志链接(上一页)和较旧日志链接（下一页）</p>
+<pre><code class="php"><span class="meta">&lt;?php</span> bloginfo(’description’); <span class="meta">?&gt;</span>
+<span class="meta">&lt;?php</span> <span class="meta">?&gt;</span>
+<span class="comment">////</span>
+<span class="comment">///</span>
+
+<span class="comment">////</span>
+</code></pre>
+<p> 显示博客的描述信息</p>
+<p>其它的一些WordPress模板代码</p>
+<pre><code>/%postname%/ 显示博客的自定义永久链接
+&lt;?php the_search_query(); ?&gt; 搜索表单的值
+&lt;?php _e(’Message’); ?&gt; 打印输出信息
+&lt;?php wp_register(); ?&gt; 显示注册链接
+&lt;?php wp_loginout(); ?&gt; 显示登入/登出链接
+&lt;!–next page–&gt; 在日志或页面中插入分页
+&lt;!–more–&gt; 截断日志
+&lt;?php wp_meta(); ?&gt; 显示管理员的相关控制信息
+&lt;?php timer_stop(1); ?&gt; 显示载入页面的时间
+&lt;?php echo get_num_queries(); ?&gt; 显示载入页面查询
+</code></pre><ol>
+<li>wordpress调用最新文章</li>
+</ol>
+<p>WordPress最新文章的调用可以使用一行很简单的模板标签wp_get_archvies来实现. 代码如下：</p>
+<p><code>&lt;?php get_archives(‘postbypost’, 10); ?&gt;</code> (显示10篇最新更新文章)<br>或者</p>
+<pre><code>&lt;?php wp_get_archives(‘type=postbypost&amp;limit=20&amp;format=custom’); ?&gt;
+</code></pre><p>后面这个代码显示你博客中最新的20篇文章，其中format=custom这里主要用来自定义这份文章列表的显示样式。具体的参数和使用方法你可 以参考官方的使用说明 wp_get_archvies。(fromat=custom也可以不要，默认以UL列表显示文章标题。)</p>
+<p>补充: 通过WP的query_posts()函数也能调用最新文章列表， 虽然代码会比较多一点，但可以更好的控制Loop的显示，比如你可以设置是否显示摘要。具体的使用方法也可以查看官方的说明。</p>
+<h2 id="2-wordpress调用随机文章"><a href="#2-wordpress调用随机文章" class="headerlink" title="2. wordpress调用随机文章"></a>2. wordpress调用随机文章</h2><pre><code>&lt;?php
+$rand_posts = get_posts(‘numberposts=10&amp;orderby=rand’);
+foreach( $rand_posts as $post ) :
+?&gt;
+</code></pre><p>下面是你想自定义的Loop</p>
+<pre><code>&lt;li&gt;&lt;a href=”&lt;?php the_permalink(); ?&gt;”&gt;&lt;?php the_title(); ?&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;?php endforeach; ?&gt;
+</code></pre><h2 id="3-wordpress调用最新留言"><a href="#3-wordpress调用最新留言" class="headerlink" title="3. wordpress调用最新留言"></a>3. wordpress调用最新留言</h2><p>下面是我之前在一个WordPress主题中代到的最新留言代码，具体也记不得是哪个主题了。该代码直接调用数据库显示一份最新留言。其中 LIMIT 10限制留言显示数量。绿色部份则是每条留言的输出样式。</p>
+<pre><code>&lt;?php
+global $wpdb;
+$sql = “SELECT DISTINCT ID, post_title, post_password, comment_ID,
+comment_post_ID, comment_author, comment_date_gmt, comment_approved,
+comment_type,comment_author_url,
+SUBSTRING(comment_content,1,30) AS com_excerpt
+FROM $wpdb-&gt;comments
+LEFT OUTER JOIN $wpdb-&gt;posts ON ($wpdb-&gt;comments.comment_post_ID =
+$wpdb-&gt;posts.ID)
+WHERE comment_approved = ’1′ AND comment_type = ” AND
+post_password = ”
+ORDER BY comment_date_gmt DESC
+LIMIT 10″;
+$comments = $wpdb-&gt;get_results($sql);
+$output = $pre_HTML;   foreach ($comments as $comment) {
+$output .= “n&lt;li&gt;”.strip_tags($comment-&gt;comment_author)
+.”:” . ” &lt;a href=”&quot; . get_permalink($comment-&gt;ID) .
+“#comment-” . $comment-&gt;comment_ID . “” title=”on ” .
+$comment-&gt;post_title . “”&gt;” . strip_tags($comment-&gt;com_excerpt)
+.”&lt;/a&gt;&lt;/li&gt;”;
+}   $output .= $post_HTML;
+echo $output;?&gt;
+</code></pre><h2 id="4-wordpress调用相关文章"><a href="#4-wordpress调用相关文章" class="headerlink" title="4.wordpress调用相关文章"></a><strong>4.wordpress调用相关文章</strong></h2><p>在文章页显示相关文章</p>
+<pre><code>&lt;?php
+$tags = wp_get_post_tags($post-&gt;ID);
+if ($tags) {
+$first_tag = $tags[0]-&gt;term_id;
+$args=array(
+‘tag__in’ =&gt; array($first_tag),
+‘post__not_in’ =&gt; array($post-&gt;ID),
+‘showposts’=&gt;10,
+‘caller_get_posts’=&gt;1
+);
+$my_query = new WP_Query($args);
+if( $my_query-&gt;have_posts() ) {
+while ($my_query-&gt;have_posts()) : $my_query-&gt;the_post(); ?&gt;
+&lt;li&gt;&lt;a href=”&lt;?php the_permalink() ?&gt;” rel=”bookmark” title=”&lt;?php the_title_attribute(); ?&gt;”&gt;&lt;?php the_title();?&gt; &lt;?php comments_number(‘ ‘,’(1)’,&apos;(%)’); ?&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;?php
+endwhile;
+}
+}
+
+wp_reset_query();
+?&gt;
+</code></pre><h2 id="5-wordpress调用指定分类的文章"><a href="#5-wordpress调用指定分类的文章" class="headerlink" title="5.wordpress调用指定分类的文章"></a>5.wordpress调用指定分类的文章</h2><pre><code>&lt;?php $posts = get_posts( “category=4&amp;numberposts=10″ ); ?&gt;
+&lt;?php if( $posts ) : ?&gt;
+&lt;ul&gt;&lt;?php foreach( $posts as $post ) : setup_postdata( $post ); ?&gt;
+&lt;li&gt;
+&lt;a href=”&lt;?php the_permalink() ?&gt;” rel=”bookmark” title=”&lt;?php the_title(); ?&gt;”&gt;&lt;?php the_title(); ?&gt;&lt;/a&gt;
+&lt;/li&gt;
+&lt;?php endforeach; ?&gt;
+&lt;/ul&gt;
+&lt;?php endif; ?&gt;
+</code></pre><h2 id="6-wordpress去评论者链接的评论输出"><a href="#6-wordpress去评论者链接的评论输出" class="headerlink" title="6.wordpress去评论者链接的评论输出"></a>6.wordpress去评论者链接的评论输出</h2><pre><code>&lt;?php
+global $wpdb;
+$sql = “SELECT DISTINCT ID, post_title, post_password, comment_ID,
+comment_post_ID, comment_author, comment_date_gmt, comment_approved,
+comment_type,comment_author_url,
+SUBSTRING(comment_content,1,14) AS com_excerpt
+FROM $wpdb-&gt;comments
+LEFT OUTER JOIN $wpdb-&gt;posts ON ($wpdb-&gt;comments.comment_post_ID =
+$wpdb-&gt;posts.ID)
+WHERE comment_approved = ’1′ AND comment_type = ” AND
+post_password = ”
+ORDER BY comment_date_gmt DESC
+LIMIT 10″;
+$comments = $wpdb-&gt;get_results($sql);
+$output = $pre_HTML;
+foreach ($comments as $comment) {
+$output .= “\n&lt;li&gt;”.strip_tags($comment-&gt;comment_author)
+.”:” . ” &lt;a href=\”&quot; . get_permalink($comment-&gt;ID) .
+“#comment-” . $comment-&gt;comment_ID . “\” title=\”on ” .
+$comment-&gt;post_title . “\”&gt;” . strip_tags($comment-&gt;com_excerpt)
+.”&lt;/a&gt;&lt;/li&gt;”;
+}
+$output .= $post_HTML;
+echo $output;?&gt;
+</code></pre><h2 id="7-wordpress调用含gravatar头像的评论输出"><a href="#7-wordpress调用含gravatar头像的评论输出" class="headerlink" title="7.wordpress调用含gravatar头像的评论输出"></a>7.wordpress调用含gravatar头像的评论输出</h2><pre><code>&lt;?php
+global $wpdb;
+$sql = “SELECT DISTINCT ID, post_title, post_password, comment_ID, comment_post_ID, comment_author, comment_date_gmt, comment_approved,comment_author_email, comment_type,comment_author_url, SUBSTRING(comment_content,1,10) AS com_excerpt FROM $wpdb-&gt;comments LEFT OUTER JOIN $wpdb-&gt;posts ON ($wpdb-&gt;comments.comment_post_ID = $wpdb-&gt;posts.ID) WHERE comment_approved = ’1′ AND comment_type = ” AND comment_author != ‘郑 永’ AND post_password = ” ORDER BY comment_date_gmt DESC LIMIT 10″;
+$comments = $wpdb-&gt;get_results($sql);
+$output = $pre_HTML;
+foreach ($comments as $comment) {
+$output .= “\n&lt;li&gt;”.get_avatar(get_comment_author_email(‘comment_author_email’), 18). ” &lt;a href=\”&quot; . get_permalink($comment-&gt;ID) . “#comment-” . $comment-&gt;comment_ID . “\” title=\”&quot; . $comment-&gt;post_title . ” 上的评论\”&gt;”. strip_tags($comment-&gt;comment_author) .”： “. strip_tags($comment-&gt;com_excerpt) .”&lt;/a&gt;&lt;/li&gt;”;
+}
+$output .= $post_HTML;
+$output = convert_smilies($output);
+echo $output;
+?&gt;
+</code></pre><p>上面代码把comment_author的值改成你的ID，18是头像大小，10是评论数量。</p>
+<h2 id="8-wordpress调用网站统计大全"><a href="#8-wordpress调用网站统计大全" class="headerlink" title="8.wordpress调用网站统计大全"></a>8.wordpress调用网站统计大全</h2><p>1、日志总数：</p>
+<pre><code>&lt;?php $count_posts = wp_count_posts(); echo $published_posts = $count_posts-&gt;publish;?&gt;
+</code></pre><p>2、草稿数目：</p>
+<pre><code>&lt;?php $count_posts = wp_count_posts(); echo $draft_posts = $count_posts-&gt;draft; ?&gt;
+</code></pre><p>3、评论总数：</p>
+<pre><code>&lt;?php echo $wpdb-&gt;get_var(“SELECT COUNT(*) FROM $wpdb-&gt;comments”);?&gt;
+</code></pre><p>4、成立时间：</p>
+<pre><code>&lt;?php echo floor((time()-strtotime(“2008-8-18″))/86400); ?&gt;
+</code></pre><p>5、标签总数：</p>
+<pre><code>&lt;?php echo $count_tags = wp_count_terms(‘post_tag’); ?&gt;
+</code></pre><p>6、页面总数：</p>
+<pre><code>&lt;?php $count_pages = wp_count_posts(‘page’); echo $page_posts = $count_pages-&gt;publish; ?&gt;
+</code></pre><p>7、分类总数：</p>
+<pre><code>&lt;?php echo $count_categories = wp_count_terms(‘category’); ?&gt;
+</code></pre><p>8、链接总数：</p>
+<pre><code>&lt;?php $link = $wpdb-&gt;get_var(“SELECT COUNT(*) FROM $wpdb-&gt;links WHERE link_visible = ‘Y’”); echo $link; ?&gt;
+</code></pre><p>9、用户总数：</p>
+<pre><code>&lt;?php $users = $wpdb-&gt;get_var(“SELECT COUNT(ID) FROM $wpdb-&gt;users”); echo $users; ?&gt;
+</code></pre><p>10、最后更新：</p>
+<pre><code>&lt;?php $last = $wpdb-&gt;get_results(“SELECT MAX(post_modified) AS MAX_m FROM $wpdb-&gt;posts WHERE (post_type = ‘post’ OR post_type = ‘page’) AND (post_status = ‘publish’ OR post_status = ‘private’)”);$last = date(‘Y-n-j’, strtotime($last[0]-&gt;MAX_m));echo $last; ?&gt;
+</code></pre><h2 id="9-wordpress判断语句"><a href="#9-wordpress判断语句" class="headerlink" title="9.wordpress判断语句"></a>9.wordpress判断语句</h2><pre><code>is_single()
+</code></pre><p>判断是否是具体文章的页面</p>
+<pre><code>is_single(’2′)
+</code></pre><p>判断是否是具体文章（id=2）的页面</p>
+<pre><code>is_single(’Beef Stew’)
+</code></pre><p>判断是否是具体文章（标题判断）的页面</p>
+<pre><code>is_single(’beef-stew’)
+</code></pre><p>判断是否是具体文章（slug判断）的页面</p>
+<pre><code>comments_open()
+</code></pre><p>是否留言开启</p>
+<pre><code>pings_open()
+</code></pre><p>是否开启ping</p>
+<pre><code>is_page()
+</code></pre><p>是否是页面</p>
+<pre><code>is_page(’42′)
+</code></pre><p>id判断，即是否是id为42的页面</p>
+<pre><code>is_page(’About Me’)
+</code></pre><blockquote>
+<p>判断标题</p>
+</blockquote>
+<pre><code>is_page(’about-me’)
+</code></pre><blockquote>
+<p>slug判断</p>
+</blockquote>
+<pre><code>is_category()
+</code></pre><blockquote>
+<p>是否是分类</p>
+</blockquote>
+<pre><code>is_category(’6′)
+</code></pre><blockquote>
+<p>id判断，即是否是id为6的分类</p>
+</blockquote>
+<pre><code>is_category(’Cheeses’)
+</code></pre><blockquote>
+<p>分类title判断</p>
+</blockquote>
+<pre><code>is_category(’cheeses’)
+</code></pre><blockquote>
+<p>分类 slug判断</p>
+</blockquote>
+<pre><code>in_category(’5′)
+</code></pre><blockquote>
+<p>判断当前的文章是否属于分类5</p>
+</blockquote>
+<pre><code>is_author()
+</code></pre><blockquote>
+<p>将所有的作者的页面显示出来</p>
+</blockquote>
+<pre><code>is_author(’1337′)
+</code></pre><blockquote>
+<p>显示author number为1337的页面</p>
+</blockquote>
+<pre><code>is_author(’Elite Hacker’)
+</code></pre><blockquote>
+<p>通过昵称来显示当前作者的页面</p>
+</blockquote>
+<pre><code>is_author(’elite-hacker’)
+</code></pre><blockquote>
+<p>下面是通过不同的判断实现以年、月、日、时间等方式来显示归档</p>
+</blockquote>
+<pre><code>is_date()
+
+is_year()
+
+is_month()
+
+is_day()
+
+is_time()
+</code></pre><blockquote>
+<p>判断当前是否是归档页面</p>
+</blockquote>
+<pre><code>is_archive()
+</code></pre><blockquote>
+<p>判断是否是搜索</p>
+</blockquote>
+<pre><code>is_search()
+</code></pre><blockquote>
+<p>判断页面是否404</p>
+</blockquote>
+<pre><code>is_404()
+</code></pre><p>判断是否翻页，比如你当前的blog是<a href="http://domain.com" target="_blank" rel="external">http://domain.com</a> 显示<a href="http://domain.com?paged=2的时候，这个判断将返" target="_blank" rel="external">http://domain.com?paged=2的时候，这个判断将返</a> 回真，通过这个函数可以配合is_home来控制某些只能在首页显示的界面，</p>
+<p>例如：</p>
+<pre><code>&lt;?php if(is_single()):?&gt;
+</code></pre><blockquote>
+<p>这里写你想显示的内容，包括函数</p>
+</blockquote>
+<pre><code>&lt;?php endif;?&gt;
+</code></pre><p>或者：</p>
+<pre><code>&lt;?php if(is_home() &amp;&amp; !is_paged() ):?&gt;
+</code></pre><blockquote>
+<p>这里写你想显示的内容，包括函数</p>
+</blockquote>
+<pre><code>&lt;?php endif;?&gt;
+</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;WordPress模板基本文件&quot;&gt;&lt;a href=&quot;#WordPress模板基本文件&quot; class=&quot;headerlink&quot; title=&quot;WordPress模板基本文件&quot;&gt;&lt;/a&gt;WordPress模板基本文件&lt;/h2&gt;&lt;p&gt;style.css 样式表文件&lt;br&gt;index.php 主页文件&lt;br&gt;single.php 日志单页文件&lt;br&gt;page.php 页面文件&lt;br&gt;archvie.php 分类和日期存档页文件&lt;br&gt;searchform.php 搜索表单文件&lt;br&gt;search.php 搜索页面文件&lt;br&gt;comments.php 留言区域文件(包括留言列表和留言框)&lt;br&gt;404.php 404错误页面&lt;br&gt;header.php 网页头部文件&lt;br&gt;sidebar.php 网页侧边栏文件&lt;br&gt;footer.php 网页底部文件&lt;/p&gt;
+&lt;h2 id=&quot;WordPress-Header头部-PHP代码&quot;&gt;&lt;a href=&quot;#WordPress-Header头部-PHP代码&quot; class=&quot;headerlink&quot; title=&quot;WordPress Header头部 PHP代码&quot;&gt;&lt;/a&gt;WordPress Header头部 PHP代码&lt;/h2&gt;
+    
+    </summary>
+    
+    
+      <category term="wordpress" scheme="http://yoursite.com/tags/wordpress/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>这是一个测试页面</title>
+    <link href="http://yoursite.com/2017/06/16/page-1/"/>
+    <id>http://yoursite.com/2017/06/16/page-1/</id>
+    <published>2017-06-15T16:10:45.000Z</published>
+    <updated>2017-06-16T12:35:32.998Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="这是一个测试页面"><a href="#这是一个测试页面" class="headerlink" title="这是一个测试页面"></a>这是一个测试页面</h2><h3 id="新手学习hexo搭建个人博客"><a href="#新手学习hexo搭建个人博客" class="headerlink" title="新手学习hexo搭建个人博客"></a>新手学习hexo搭建个人博客</h3><blockquote>
+<p>这是一个测试页面</p>
+</blockquote>
+<hr>
+<p>==这是带黄色背景的==</p>
+<p><em>搞个表格来</em></p>
+<table>
+<thead>
+<tr>
+<th>姓名</th>
+<th>年龄</th>
+<th>籍贯</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>张三</td>
+<td>23</td>
+<td>江西</td>
+</tr>
+<tr>
+<td>李四</td>
+<td>24</td>
+<td>湖南</td>
+</tr>
+</tbody>
+</table>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;这是一个测试页面&quot;&gt;&lt;a href=&quot;#这是一个测试页面&quot; class=&quot;headerlink&quot; title=&quot;这是一个测试页面&quot;&gt;&lt;/a&gt;这是一个测试页面&lt;/h2&gt;&lt;h3 id=&quot;新手学习hexo搭建个人博客&quot;&gt;&lt;a href=&quot;#新手学习hexo搭建个人博客&quot;
+    
+    </summary>
+    
+    
+      <category term="随笔" scheme="http://yoursite.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://yoursite.com/2017/06/15/hello-world/"/>
+    <id>http://yoursite.com/2017/06/15/hello-world/</id>
+    <published>2017-06-15T15:38:05.674Z</published>
+    <updated>2017-06-15T15:38:05.675Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
