@@ -1,0 +1,1377 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>你是什么人便会遇上什么人</title>
+<meta name="keywords" content="你,是什么,人,便会,遇上,什么,一直,都,个性," />
+<meta name="description" content="一直都个性乐观的人，从来就不把别人的言论放在心里，所以面对指责，他们会选择对自己最好的方式解决，是不会打扰自己快乐心情的。有必要的，就说说笑笑的敷衍一下，当然过后" />
+<meta name="author" content="Andy">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" user-scalable="no">
+<!--CSS-->
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<!--CSS-->
+<link rel="stylesheet" href="http://www.d163.net/static/andy/css/default.css">
+<link rel="stylesheet" href="http://www.d163.net/static/andy/css/public.css">
+<link rel="stylesheet" href="http://www.d163.net/static/andy/css/animation.css">
+
+<link rel="stylesheet" type="text/css" href="http://www.d163.net/static/andy/css/skin_1.css" title="qingxin">
+<link rel="stylesheet" type="text/css" href="http://www.d163.net/static/andy/css/skin_2.css" title="jianyue">
+<link rel="stylesheet" type="text/css" href="http://www.d163.net/static/andy/css/skin_3.css" title="qingshuang">
+<link rel="stylesheet" href="http://www.d163.net/static/andy/css/font-icon.css">
+<link rel="stylesheet" href="http://www.d163.net/static/andy/css/face.css">
+<!--JS-->
+
+<script type="text/javascript" src="http://www.d163.net/static/andy/js/jquery.2.1.4.min.js"></script>
+<script type="text/javascript" src="/include/dedeajax2.js"></script>
+<script>
+	$("html").append("<div class='jiazai'><img src='http://www.d163.net/static/andy/images/icon/loading3.gif'/><span>正在加载中请等待...</span></div>")
+
+</script>
+<script type="text/javascript" src="http://www.d163.net/static/andy/js/my.js"></script>
+
+<script type="text/javascript" src="http://www.d163.net/static/andy/js/superbg.min.js"></script>
+<script type="text/javascript" src="http://www.d163.net/static/andy/js/superbg-custom.js"></script>
+
+<script type="text/javascript" src="http://www.d163.net/static/andy/js/album.js"></script>
+<script type="text/javascript" src="http://www.d163.net/static/andy/js/tooltip.js"></script>
+<script type="text/javascript" src="http://www.d163.net/static/andy/js/face.js"></script>
+<script type="text/javascript" src="http://www.d163.net/static/andy/js/layer/layer.js"></script>
+<script type="text/javascript" src="http://www.d163.net/static/andy/js/checkform.js" charset="utf-8"></script>
+<!--[if lte IE 9]>
+	<script>window.location.href='http://cdn.dmeng.net/upgrade-your-browser.html?referrer='+location.href;</script>
+<![endif]-->
+<script type="text/javascript" src="http://www.d163.net/static/andy/js/index.js"></script>
+<script type="text/javascript" src="/include/dedeajax2.js"></script>
+<script language="javascript" type="text/javascript" src="/include/ckeditor/plugins/syntaxhighlight/code.js" ></script>
+<!-- 织梦技术研究中心 http://www.dedejs.com -->
+<link type="text/css" rel="stylesheet" href="/include/ckeditor/plugins/syntaxhighlight/styles/shCore.css"/>
+<link type="text/css" rel="stylesheet" href="/include/ckeditor/plugins/syntaxhighlight/styles/shThemeDefault.css"/>
+<script>
+  function CheckLogin(){
+      var taget_obj = document.getElementById('_ajax_feedback');
+      myajax = new DedeAjax(taget_obj,false,false,'','','');
+      myajax.SendGet2("/member/ajax_feedback.php");
+      DedeXHTTP = null;
+  }
+  function postBadGood(ftype,fid)
+  {
+    var taget_obj = document.getElementById(ftype+fid);
+    var saveid = GetCookie('badgoodid');
+    if(saveid != null)
+    {
+      var saveids = saveid.split(',');
+      var hasid = false;
+      saveid = '';
+      j = 1;
+      for(i=saveids.length-1;i>=0;i--)
+      {
+        if(saveids[i]==fid && hasid) continue;
+        else {
+          if(saveids[i]==fid && !hasid) hasid = true;
+          saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+          j++;
+          if(j==10 && hasid) break;
+          if(j==9 && !hasid) break;
+        }
+      }
+      if(hasid) { alert('您刚才已表决过了喔！'); return false;}
+      else saveid += ','+fid;
+      SetCookie('badgoodid',saveid,1);
+    }
+    else
+    {
+      SetCookie('badgoodid',fid,1);
+    }
+    myajax = new DedeAjax(taget_obj,false,false,'','','');
+    myajax.SendGet2("/plus/feedback.php?aid="+fid+"&action="+ftype+"&fid="+fid);
+  }
+  function postDigg(ftype,aid)
+  {
+    var taget_obj = document.getElementById('newdigg');
+    var saveid = GetCookie('diggid');
+    if(saveid != null)
+    {
+      var saveids = saveid.split(',');
+      var hasid = false;
+      saveid = '';
+      j = 1;
+      for(i=saveids.length-1;i>=0;i--)
+      {
+        if(saveids[i]==aid && hasid) continue;
+        else {
+          if(saveids[i]==aid && !hasid) hasid = true;
+          saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+          j++;
+          if(j==20 && hasid) break;
+          if(j==19 && !hasid) break;
+        }
+      }
+      if(hasid) { alert("您已经顶过该帖，请不要重复顶帖 ！"); return; }
+      else saveid += ','+aid;
+      SetCookie('diggid',saveid,1);
+    }
+    else
+    {
+      SetCookie('diggid',aid,1);
+    }
+    myajax = new DedeAjax(taget_obj,false,false,'','','');
+    var url = "/plus/digg_ajax.php?action="+ftype+"&id="+aid;
+    myajax.SendGet2(url);
+  }
+  function getDigg(aid)
+  {
+    var taget_obj = document.getElementById('newdigg');
+    myajax = new DedeAjax(taget_obj,false,false,'','','');
+    myajax.SendGet2("/plus/digg_ajax.php?id="+aid);
+    DedeXHTTP = null;
+  }
+</script>
+
+</head>
+<body class="nobg">
+<!--导航开始-->
+<header class="myheader">
+	<div class="top">
+		<!--头像左边部分-->
+		<div class="top-left">
+		  <div class="logo"><a href="/"><img src="http://www.d163.net/static/andy/images/logo3.gif"></a></div>
+				<!--滚动消息-->
+			<div class="web-xiaoxi">
+				<i class="el-speaker"></i>
+				<ul class="mulitline">
+				<li>内容如有侵犯，请立即联系管理员删除</li>
+				<li>做了一些小调整，使之看起来更像博客。</li>
+				<li>本站提供丰富的素材下载，有源码、模板、插件...</li>
+				</ul>
+			</div>
+				<!--END 消息 -->
+
+			<!--手机菜单按钮-->
+			<div class="mobile-nav"><i class="el-lines"></i><i class="el-remove"></i></div>
+		</div>
+	<!--电脑导航开始-->
+		<nav class="mynav">
+			<ul class="orange-text">
+				<li  class=' ' ><a href="/" title="主页">主页</a></li>
+				<li class="drop ">
+				<a title="说说" href="/html/shuoshuo/">说说</a>
+				<div class="drop-nav orange-text">
+					<ul>
+					
+					</ul>
+				</div>
+				</li><li class="drop nav-active">
+				<a title="慢生活" href="/html/life/">慢生活</a>
+				<div class="drop-nav orange-text">
+					<ul>
+					
+					<li class="menulist-sub-item"><a title="欣赏" href="/html/xs/">欣赏</a></li>
+					
+					<li class="menulist-sub-item"><a title="前端技术" href="/html/web/">前端技术</a></li>
+					
+					<li class="menulist-sub-item"><a title="互联网资讯" href="/html/internet/">互联网资讯</a></li>
+					
+					</ul>
+				</div>
+				</li><li class="drop ">
+				<a title="学无止境" href="/html/study/">学无止境</a>
+				<div class="drop-nav orange-text">
+					<ul>
+					
+					<li class="menulist-sub-item"><a title="web前端" href="/html/web2/">web前端</a></li>
+					
+					<li class="menulist-sub-item"><a title="PHP" href="/html/php/">PHP</a></li>
+					
+					</ul>
+				</div>
+				</li><li class="drop ">
+				<a title="留言" href="/plus/guestbook.php">留言</a>
+				<div class="drop-nav orange-text">
+					<ul>
+					
+					</ul>
+				</div>
+				</li><li class="drop ">
+				<a title="关于" href="/html/about/about.html">关于</a>
+				<div class="drop-nav orange-text">
+					<ul>
+					
+					</ul>
+				</div>
+				</li>
+				
+			</ul>
+			 <!--移动的滑动-->
+        <div class="move-bg"></div>
+        <!--移动的滑动 end-->
+		</nav>
+		 <!--会员登录-->
+		<div class="vip" style="width: 4%;float: right;text-align: right;">
+			<a href="javascript:;" onclick="comment(this)"><img class="img-circle" src="http://www.d163.net/static/andy/images/icon/default_head_img.gif" alt="仔仔博客" title="仔仔博客" style="margin-top: 17px;"></a>
+		</div>
+	 <!--会员登录-->
+		<!--这里是手机导航-->
+		<div class="mob-menu">
+		<!--手机顶部搜索-->
+			<div class="search ">
+				<ul class="loginwap-third-list">
+                <li><a class="weixin-login" title="微信账号登录" href="http://www.100txy.com/Home/User/oauth_login/type/wechat.html"></a></li>
+                <li><a class="qq-login" title="QQ账号登录" href="http://www.100txy.com/Home/User/oauth_login/type/qq.html"></a></li>
+                <li style="margin-right: 0!important;"><a class="weibo-login" title="新浪微博账号登录" href="http://www.100txy.com/Home/User/oauth_login/type/sina.html"></a></li>
+        </ul>
+			</div>
+			<!--手机下拉菜单-->
+			<ul class="mob-ulnav">
+				<li class="nav-active"><a href="/">首页</a></li>
+				<li class="">
+				<a title="说说" href="/html/shuoshuo/">说说</a>
+				<div class="drop-nav orange-text">
+					<ul>
+					
+					</ul>
+				</div>
+				</li><li class="nav-active">
+				<a title="慢生活" href="/html/life/">慢生活</a>
+				<div class="drop-nav orange-text">
+					<ul>
+					
+					<li class="menulist-sub-item"><a title="欣赏" href="/html/xs/">欣赏</a></li>
+					
+					<li class="menulist-sub-item"><a title="前端技术" href="/html/web/">前端技术</a></li>
+					
+					<li class="menulist-sub-item"><a title="互联网资讯" href="/html/internet/">互联网资讯</a></li>
+					
+					</ul>
+				</div>
+				</li><li class="">
+				<a title="学无止境" href="/html/study/">学无止境</a>
+				<div class="drop-nav orange-text">
+					<ul>
+					
+					<li class="menulist-sub-item"><a title="web前端" href="/html/web2/">web前端</a></li>
+					
+					<li class="menulist-sub-item"><a title="PHP" href="/html/php/">PHP</a></li>
+					
+					</ul>
+				</div>
+				</li><li class="">
+				<a title="留言" href="/plus/guestbook.php">留言</a>
+				<div class="drop-nav orange-text">
+					<ul>
+					
+					</ul>
+				</div>
+				</li><li class="">
+				<a title="关于" href="/html/about/about.html">关于</a>
+				<div class="drop-nav orange-text">
+					<ul>
+					
+					</ul>
+				</div>
+				</li>
+			</div>
+	</div>
+</header>
+<!--导航结束-->
+
+<!--主题框架开始-->
+<div class="container">
+<!--左侧开始-->
+	<section class="mysection">
+	<article>
+		<div class="mbnav"><i class="el el-home"></i><a href="/" title="">首页</a>&gt;<a href="/html/xs/">欣赏</a>&gt;正文</div>
+		<h3 class="arc-title index-title">你是什么人便会遇上什么人</h3>
+
+		<div class="post-line bg-color">
+
+			<ul>
+
+				<li><a title="仔仔发表于1526559041"><i class="el-time"></i><time>2018-05-17</time></a></li>
+
+				<li><a href="###" title="本文作者：仔仔"><i class="el-user"></i>仔仔</a></li>
+
+				<li><a href="#postform" title="转到评论"><i class="el-comment"></i> 0条</a></li>
+
+				<li><a title="已有 64 次浏览"><i class="el-eye-open"></i>(64)</a></li>
+
+			</ul>
+
+		</div>
+		
+		
+		<div class="article-content bg-color">
+
+
+			<!-- <div class="article-content bg-color" id="Hotbg"> -->
+
+			<!--文章正文-->
+
+			<div class="article-body">
+				<p style="margin: 0px 0px 10px; padding: 0px; color: rgb(85, 85, 85); font-family: 微软雅黑, Arial, Helvetica, sans-serif; font-size: 14px; text-align: justify;">
+	一直都个性乐观的人，从来就不把别人的言论放在心里，所以面对指责，他们会选择对自己最好的方式解决，是不会打扰自己快乐心情的。有必要的，就说说笑笑的敷衍一下，当然过后就会当过眼云烟般，一吹即散，至于其它的，就更不在意了，嘴巴长在别人身上，别人爱怎么说就怎么说吧。</p>
+<p style="margin: 0px 0px 10px; padding: 0px; color: rgb(85, 85, 85); font-family: 微软雅黑, Arial, Helvetica, sans-serif; font-size: 14px; text-align: justify;">
+	你存心做一个与世无争的老实人吧，人家就利用你欺侮你。你稍有才德品貌，人家就嫉妒你排挤你。你大度退让，人家就侵犯你损害你。你要不与人争，就得于世无求，同时还要维持实力准备斗争。你要和别人和平共处，就先得和他们周旋，还得准备随时吃亏。</p>
+<p style="margin: 0px 0px 10px; padding: 0px; color: rgb(85, 85, 85); font-family: 微软雅黑, Arial, Helvetica, sans-serif; font-size: 14px; text-align: justify;">
+	我们常常忽视出口会伤人的后果。人与人语言沟通，也是一种心之沟通，出言愈狠，伤人心也愈深。借钱可以还，人情可以欠，伤害别人的事，结果不可思议。多年友谊，恩爱夫妻，有时就为了一句狠话，像心头一口毒钉，永远麻痺着亲密感情交流。恶言，真要慎出，平日多誠心爱语，乃最简易之佈施。</p>
+
+			</div>
+
+				<!--END 文章正文 -->
+
+				<!-- 分享 -->
+
+				<div class="article-fx"><span class="img-circle" href="javascript:void(0)" onclick="dashangToggle()">打赏</span>&nbsp;&nbsp;&nbsp;<a class="fx-btn img-circle" href="javascript:;">分享</a>
+
+					<div class="bd-fx arc-bdfx">
+
+						<i class="el-remove fx-close"></i>
+
+						<ul class="bdsharebuttonbox bdshare-button-style1-32" data-bd-bind="1526835575382">
+
+							<li><a href="http://www.100txy.com/article/17.html#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></li>
+
+							<li><a href="http://www.100txy.com/article/17.html#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a></li>
+
+							<li><a href="http://www.100txy.com/article/17.html#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a></li>
+
+							<li><a href="http://www.100txy.com/article/17.html#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a></li>
+
+						</ul>
+						<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"32"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+					</div>
+
+				</div>
+				<!--END 分享-->
+			<hr>
+
+				<!--标签-->
+				<div class="article_tag">
+          <ul>
+				
+						<li><a href="/html/xs/" title="归类：欣赏">欣赏</a></li>
+						<li>
+			            <a class="b-tag-name" title="标签：工程师" href="###">人生语录</a>
+							</li>
+
+						</ul>
+        </div>
+
+			</div>
+
+	</article>
+
+
+
+	<!--上一篇，下一篇-->
+
+	<div class="shangyip bg-color">
+	<span><i class="el-arrow-up"></i>上一篇：没有了 </span>
+	<span><i class="el-arrow-down"></i>下一篇：<a href='/html/xs/4.html'>一个人的旅途</a> </span>
+	</div>
+
+<!--随机推荐-->
+<div class="maybe-love">
+
+	<h4 class="index-title"><i class="el-heart"></i>您还可能喜欢</h4>
+
+	<ul>
+		<li>
+
+			<a href="/html/xs/26.html">
+
+			<img src="/uploads/allimg/180531/1-1P531001U30-L.jpg" alt="无人愿做「菊外人」" title="无人愿做「菊外人」">
+
+			<span>无人愿做「菊外人」</span>
+
+			</a>
+
+		</li>
+<li>
+
+			<a href="/html/xs/4.html">
+
+			<img src="/uploads/allimg/180517/1-1P51H352270-L.jpg" alt="一个人的旅途" title="一个人的旅途">
+
+			<span>一个人的旅途</span>
+
+			</a>
+
+		</li>
+ 
+
+	</ul>
+
+</div>
+
+<!-- 通用评论开始 -->
+<!-- //主模板必须要引入/include/dedeajax2.js -->
+<a name='postform'></a>
+<div class="mt1">
+		<dl class="tbox">
+		<dt>
+			<strong>发表评论</strong>
+			<span class="more"></span>
+		</dt>
+		<dd>
+		<div class="andy_comment_post">
+	        <form action="#" method="post" name="feedback">
+	        <input type="hidden" name="dopost" value="send" />
+	        <input type="hidden" name="comtype" value="comments">
+	        <input type="hidden" name="aid" value="3" />
+	        <input type="hidden" name="fid" id='feedbackfid' value="0" />
+	        <div class="dcmp-title">
+				<small>请自觉遵守互联网相关的政策法规，严禁发布色情、暴力、反动的言论。</small>
+			</div><!-- /dcmp-title -->
+			<div class="dcmp-stand">
+				<strong>评价:</strong>
+					<span><input type="radio" name="feedbacktype" checked="1" value="good" id="dcmp-stand-good" /><label for="dcmp-stand-good"><img src="http://www.d163.net/static/andy/images/cmt-good.gif" />好评</label></span>
+					<span><input type="radio" name="feedbacktype" value="feedback" id="dcmp-stand-neu" /><label for="dcmp-stand-neu"><img src="http://www.d163.net/static/andy/images/cmt-neu.gif" />中立</label></span>
+					<span><input type="radio" name="feedbacktype" value="bad" id="dcmp-stand-bad" /><label for="dcmp-stand-bad"><img src="http://www.d163.net/static/andy/images/cmt-bad.gif" />差评</label></span>
+			</div><!-- /dcmp-stand -->
+            <div class="clr"></div>
+                        <script type="text/javascript">
+            					//<![CDATA[
+            					window.CKEDITOR_BASEPATH='/include/ckeditor/';
+            					//]]>
+                        </script>
+            <script type="text/javascript" src="/include/ckeditor/ckeditor.js?t=B8DJ5M3"></script>
+            <div class="dcmp-content">
+            	<textarea style="width: 96%;" id="msg" name="msg" rows="5" class="ipt-txt"></textarea>
+            </div>
+            <div class="dcmp-mood">
+				<strong>表情:</strong>
+				<!-- <ul>            
+						<li><input  type="radio" name="face" value="1" checked="1" /><img src="/images/mood/ico-mood-1.gif" /></li><li><input  type="radio" name="face" value="2" /><img src="/images/mood/ico-mood-2.gif" /></li><li><input  type="radio" name="face" value="3" /><img src="/images/mood/ico-mood-3.gif" /></li><li><input  type="radio" name="face" value="4" /><img src="/images/mood/ico-mood-4.gif" /></li><li><input  type="radio" name="face" value="5" /><img src="/images/mood/ico-mood-5.gif" /></li><li><input  type="radio" name="face" value="6" /><img src="/images/mood/ico-mood-6.gif" /></li><li><input  type="radio" name="face" value="7" /><img src="/images/mood/ico-mood-7.gif" /></li><li><input  type="radio" name="face" value="8" /><img src="/images/mood/ico-mood-8.gif" /></li><li><input  type="radio" name="face" value="9" /><img src="/images/mood/ico-mood-9.gif" /></li><li><input  type="radio" name="face" value="10" /><img src="/images/mood/ico-mood-10.gif" /></li><li><input  type="radio" name="face" value="11" /><img src="/images/mood/ico-mood-11.gif" /></li>                   
+				</ul> -->
+
+				<img src="/images/mood/ico-mood-1.gif" onclick="document.getElementById('msg').value+='{s:10}';" /> 
+				<img src="/images/mood/ico-mood-2.gif" onclick="document.getElementById('msg').value+='{s:2}';" /> 
+				<img src="/images/mood/ico-mood-3.gif" onclick="document.getElementById('msg').value+='{s:3}';" /> 
+				<img src="/images/mood/ico-mood-4.gif" onclick="document.getElementById('msg').value+='{s:4}';" /> 
+				<img src="/images/mood/ico-mood-5.gif" onclick="document.getElementById('msg').value+='{s:5}';" /> 
+				<img src="/images/mood/ico-mood-6.gif" onclick="document.getElementById('msg').value+='{s:6}';" /> 
+				<img src="/images/mood/ico-mood-7.gif" onclick="document.getElementById('msg').value+='{s:7}';" /> 
+				<img src="/images/mood/ico-mood-8.gif" onclick="document.getElementById('msg').value+='{s:8}';" /> 
+			</div>
+			<!-- /dcmp-mood -->
+			<style>
+				.dcmp-mood{overflow:hidden;}
+				.dcmp-mood>ul>li{float:left;}
+				.mt1{background-color:rgba(255,255,255,.75);}
+				.dcmp-submit{margin-top:10px;text-align: center;}
+				.dcmp-submit button{display:inline-block;padding:10px 0;width:200px;border:none;border-radius:9px;background-color:#ff4200;color:#fff;text-align:center;font-size:16px;cursor:pointer;}
+				.dcmp-userinfo .info-item{display:inline-block;}
+				.dcmp-userinfo .info-item input{padding:4px 0;}
+				.comment-content >div:nth-of-type(2){color: red;}
+				.comment-area>ul>li:not(.bg-color){margin:0;padding:0;}
+			</style>
+
+			<!-- /dcmp-content -->
+			<!--未登陆-->
+			<div class="dcmp-post">
+				<div class="dcmp-userinfo" id="_ajax_feedback">
+					<div class="info-item">
+						<label>用户名:<input type="text" name="username" class="ipt-txt"></label>
+					</div>
+                    <div class="info-item">
+                    	<label>验证码:<input type="text" name="validate" class="ipt-txt" style="text-transform:uppercase;"></label>
+                    	<img src= "/include/vdimgck.php" id="validateimg" style="cursor:pointer" onclick="this.src=this.src+'?'" title="点击我更换图片" alt="点击我更换图片" />
+    	                <label for="dcmp-submit-guest" /><input type="checkbox" name="notuser" id="dcmp-submit-guest">
+    	                匿名? </label>
+                    </div>
+				</div>
+                
+				<div class="dcmp-submit">
+					<button type="button" onClick='PostComment()'>发表评论</button>
+				</div>
+			</div>
+        </form>
+		</div>
+		</dd>
+		</dl>
+	</div><!-- //评论表单区结束 -->
+
+<!-- //评论内容区 -->
+	<a name='commettop'></a>
+	<div class="mt1">
+			<dl class="tbox">
+				<dt>
+					<strong>最新评论</strong>
+					
+				</dt>
+				<!-- //这两个ID的区块必须存在，否则JS会出错 -->
+				<dd id='commetcontentNew'></dd>
+				<dd id='commetcontent'></dd>
+			</dl>
+	</div>
+<!--
+//由于评论载入时使用异步传输，因此必须在最后一步加载（DIGG和评论框须放在评论内容前面）
+//如果一定需要提前的把myajax.SendGet改为myajax.SendGet2，但可能会引起页面阻滞
+-->
+<script language='javascript'>
+function LoadCommets(page)
+{
+		var taget_obj = document.getElementById('commetcontent');
+		var waithtml = "<div style='line-height:50px'><img src='/images/loadinglit.gif' />评论加载中...</div>";
+		var myajax = new DedeAjax(taget_obj, true, true, '', 'x', waithtml);
+		myajax.SendGet2("/plus/feedback_ajax.php?dopost=getlist&aid=3&page="+page);
+		DedeXHTTP = null;
+}
+function PostComment()
+{
+		var f = document.feedback;
+		var nface = '6';
+		var nfeedbacktype = 'feedback';
+		var nvalidate = '';
+		var nnotuser = '';
+		var nusername = '';
+		var npwd = '';
+		var taget_obj = $DE('commetcontentNew');
+		var waithtml = "<div style='line-height:30px'><img src='/images/loadinglit.gif' />正在发送中...</div>";
+		if(f.msg.value=='')
+		{
+			alert("评论内容不能为空！");
+			return;
+		}
+		if(f.validate)
+		{
+			if(f.validate.value=='') {
+				alert("请填写验证码！");
+				return;
+			}
+			else {
+				nvalidate = f.validate.value;
+			}
+		}
+		if(f.msg.value.length > 500)
+		{
+			alert("你的评论是不是太长了？请填写500字以内的评论。");
+			return;
+		}
+		if(f.feedbacktype) {
+			for(var i=0; i < f.feedbacktype.length; i++)
+				if(f.feedbacktype[i].checked) nfeedbacktype = f.feedbacktype[i].value;
+		}
+		if(f.face) {
+			for(var j=0; j < f.face.length; j++)
+				if(f.face[j].checked) nface = f.face[j].value;
+		}
+		if(f.notuser.checked) nnotuser = '1';
+		if(f.username) nusername = f.username.value;
+		if(f.pwd) npwd = f.pwd.value;
+		
+		var myajax = new DedeAjax(taget_obj, false, true, '', '', waithtml);
+		myajax.sendlang = 'utf-8';
+		myajax.AddKeyN('dopost', 'send');
+		myajax.AddKeyN('aid', '3');
+		myajax.AddKeyN('fid', f.fid.value);
+		myajax.AddKeyN('face', nface);
+		myajax.AddKeyN('feedbacktype', nfeedbacktype);
+		myajax.AddKeyN('validate', nvalidate);
+		myajax.AddKeyN('notuser', nnotuser);
+		myajax.AddKeyN('username', nusername);
+		myajax.AddKeyN('pwd', npwd);
+		myajax.AddKeyN('msg', f.msg.value);
+		myajax.SendPost2('/plus/feedback_ajax.php');
+		f.msg.value = '';
+		f.fid.value = 0;
+		if(f.validate)
+		{
+			if($DE('validateimg')) $DE('validateimg').src = "/include/vdimgck.php?"+f.validate.value;
+			f.validate.value = '';
+		}
+}
+
+function ajaxFeedback(aid, fid, type)
+{
+	
+	var taget_obj = $DE('ajaxfeedback_'+fid);
+	if(taget_obj.innerHTML == '')
+	{
+		var myajax = new DedeAjax(taget_obj, true, true, '', 'x');
+		myajax.SendGet2("/plus/feedback.php?aid="+aid+"&fid="+fid+"&action=quote&type=ajax");
+		eval('var result = typeof CKEDITOR.instances.msg_'+fid);
+		if(result != 'undefined')
+		{
+			// 删除实例
+			eval('var edit = CKEDITOR.instances.msg_'+fid);
+			CKEDITOR.remove(edit);
+		}
+		CKEDITOR.replace(document.getElementById('msg_'+fid) , CKEDITOR.instances.msg.config);
+		scroll(0, taget_obj.offsetTop - 120);
+		var formname = 'f = document.ajaxfeedback_'+fid;
+		eval(formname);
+		if(f.validate)
+		{
+			if($DE('vdimg_'+fid)) $DE('vdimg_'+fid).src = "/include/vdimgck.php?"+f.validate.value;
+			f.validate.value = '';
+		}
+		
+		DedeXHTTP = null;
+	}
+}
+
+function ajaxQuotePost(fid)
+{
+	var formname = 'f = document.ajaxfeedback_'+fid;
+	eval(formname);
+	//var f = document.formname;
+	//var f = f[0];
+	var nvalidate = '';
+	var nnotuser = '';
+	var nusername = '';
+	var npwd = '';
+	var taget_obj = $DE('commetcontentNew');
+	var waithtml = "<div style='line-height:30px'><img src='/images/loadinglit.gif' />正在发送中...</div>";
+	eval('var msg = CKEDITOR.instances.msg_'+fid+'.getData()');
+
+	if(f.validate)
+	{
+		if(f.validate.value=='') {
+			alert("请填写验证码！");
+			return;
+		}
+		else {
+			nvalidate = f.validate.value;
+		}
+	}
+	var myajax = new DedeAjax(taget_obj, false, true, '', '', waithtml);
+	
+	if(f.notuser.checked) nnotuser = '1';
+	if(f.username) nusername = f.username.value;
+	if(f.pwd) npwd = f.pwd.value;
+	
+	myajax.sendlang = 'utf-8';
+	myajax.AddKeyN('dopost', 'send');
+	myajax.AddKeyN('aid', '3');
+	myajax.AddKeyN('fid', f.fid.value);
+	myajax.AddKeyN('type', 'ajax');
+	myajax.AddKeyN('comtype', f.comtype.value);
+	myajax.AddKeyN('isconfirm','yes');
+	
+	myajax.AddKeyN('typeid', f.typeid.value);
+	myajax.AddKeyN('quotemsg', f.quotemsg.value);
+	myajax.AddKeyN('validate', nvalidate);
+	myajax.AddKeyN('notuser', nnotuser);
+	myajax.AddKeyN('username', nusername);
+	myajax.AddKeyN('pwd', npwd);
+	myajax.AddKeyN('msg', msg);
+	myajax.SendPost2('/plus/feedback_ajax.php');
+	//alert(f.quotemsg.value);
+	if($DE('ajaxfeedback_'+fid).innerHTML != null)
+	{
+		$DE('ajaxfeedback_'+fid).innerHTML = '';
+	}
+	scroll(0, taget_obj.offsetTop);
+}
+
+function quoteCommet(fid)
+{
+	document.feedback.fid.value = fid;
+}
+LoadCommets(1);
+</script>
+<!-- //评论内容区结束 -->
+
+
+</section>
+
+<!--左侧结束-->
+
+<!-- 右侧 -->
+<aside class="myaside">
+
+<!--关注我-->
+
+<div class="focus-me bg-color animation-div">
+
+	<h4 class="index-title"><i class="el-heart"></i>关注我<small>Focus Me</small></h4>
+
+		<div class="xiangguan">
+
+				<div><a class="benbo" href="//weibo.com/andywenming" rel="nofollow" target="_blank"><i class="el el-rss"></i></a><span>新浪微博</span></div>
+				
+				<div><a class="taobao" href="https://github.com/andywenming"  rel="nofollow" target="_blank"><i class="el el-github"></i></a><span>github</span></div>
+
+				<div><a class="side-fx"><i class="el-share-alt"></i></a><span>分享本博</span></div>
+
+				<div><a class="mail-btn" href="javascript:;"><i class="el el-picasa"></i></a><span>公众号</span></div>
+
+		</div>
+
+
+		<div class="mail-dy">
+
+			<img src="http://www.d163.net/static/andy/images/icon/weixin.jpg">
+			<i class="el-remove fx-close"></i>
+
+		</div>
+
+		<div class="bd-fx side-bdfx ">
+
+			<i class="el-remove fx-close"></i>
+
+			<ul class="bdsharebuttonbox">
+
+				<li><a href="###" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></li>
+
+				<li><a href="###" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a></li>
+
+				<li><a href="###" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a></li>
+
+				<li><a href="###" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a></li>
+
+			</ul>
+
+			<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"32"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+		</div>
+
+</div>
+
+<!--右侧个人统计-->
+
+<div class="web-author bg-color animation-div">
+
+		<div class="author-tx">
+
+			<a class="img-circle" href="about.html" title="点击查看详细信息">
+
+				<img class="img-circle" src="http://www.d163.net/static/andy/images/icon/ava.jpg"/>
+
+			</a>
+
+		</div>
+
+		<div class="author-name"><span class="blue-text">仔仔</span><p>一位80后全栈开发站长</p></div>
+
+		<div class="data-info">
+
+			<ul>
+
+				<li><strong>5</strong><span>今日会员</span></li>
+
+				<li><strong>274</strong><span>今日访问ip</span></li>
+
+				<!-- <li><strong>115</strong><span>文章数量</span></li> -->
+				<li><strong>130</strong><span>今日访客</span></li>
+
+			</ul>
+
+		</div>
+
+</div>
+
+<!--END 右侧个人统计-->
+
+<!--搜索-->
+
+<div class="search animation-div">
+
+	<form action="/plus/search.php" >
+	<input type="hidden" name="kwtype" value="0" />
+
+		<div class="search-index">
+
+			<input name="q" type="text"  placeholder="请输入关键字" onfocus="this.placeholder=''" onblur="this.placeholder='请输入关键字'"/>
+
+			<i class="el-search"><input value=" " type="submit" ></i>
+
+		</div>
+
+	</form>
+
+</div>
+<!-- //搜索 -->
+
+
+
+<!--最新更新-->
+<div class="clos-new bg-color animation-div">
+
+	<h4 class="index-title"><i class="el-bulb"></i>最新更新<small>Close New</small></h4>
+
+	<ul>
+
+	<li><i class="el-cloud"></i><iframe id="tianqi"  scrolling="no" frameborder="0" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code&id=34&icon=1&num=3"></iframe></li>
+
+	<li><span><i class="el-arrow-up"></i>最近：<font class="blue-text">仔仔</font> 05-11 16:35</span><a title="layui中使用form表单监听ajax异步验证注册" > 更新了<b class="lable">文章</b></a></li>
+
+	<li><i class="el-calendar"></i>开发动态：<a title="支付宝支付"  href="###" class="orange-text" target="_blank"><b class="lable">支付宝捐赠</b></a></li>
+
+	</ul>
+
+</div>
+
+<!--说说-->
+<div class="bg-color animation-div">
+	<h4 class="index-title"><i class="el-headphones"></i>说说<small>Shuo Shuo</small></h4>
+	<div class="shuo-side">
+		<ul>
+		<li id="Hots">
+				<span class="shuobg1"><strong>05-26</strong></span>
+				<div><a title="很久没有去电影院看电影了！" href="/html/shuoshuo/21.html" >很久没有去电影院看电影了！</a><b title="点击182">(182)</b></div>
+			</li>
+<li id="Hots">
+				<span class="shuobg1"><strong>05-22</strong></span>
+				<div><a title="梦想还是要有的，万一实现了呢。" href="/html/shuoshuo/17.html" >梦想还是要有的，万一实现了呢。</a><b title="点击135">(135)</b></div>
+			</li>
+
+
+		</ul>
+	</div>
+</div>
+
+<!--推荐图文-->
+<div class="article-push  bg-color animation-div">
+	<h4 class="index-title"><i class="el-asl"></i>推荐图文<small>Push Article</small></h4>
+	<ul>
+	<li>
+			<div class="arcimg img_loading">
+				<a href="/html/xs/5.html">
+          <img src="/uploads/allimg/180518/1-1P51P052590-L.jpg" alt="我们共有过去，却各有未来" title="我们共有过去，却各有未来">
+        </a>
+			</div>
+			<div class="arc-right">
+				<h4 class="blue-text"><a href="/html/xs/5.html">我们共有过去，却各有未来</a></h4>
+				<p>一个小假期，刘若英导演的《后来的我们》像坐了趟过山车。预售破亿创纪录，首映日却爆出退票风波。 作为观众，我多少</p>
+				<ul>
+					<li><a title="发表于18-05-18"><i class="el-time"></i>2018-05-18</a></li>
+					<li><a title="117次浏览"><i class="el-fire"></i>117</a></li>
+				</ul>
+			</div>
+		</li>
+<li>
+			<div class="arcimg img_loading">
+				<a href="/html/xs/4.html">
+          <img src="/uploads/allimg/180517/1-1P51H352270-L.jpg" alt="一个人的旅途" title="一个人的旅途">
+        </a>
+			</div>
+			<div class="arc-right">
+				<h4 class="blue-text"><a href="/html/xs/4.html">一个人的旅途</a></h4>
+				<p>旅行的意义是什么，我想就是给自己一个完全放松的机会。 旅行和旅游应该是完全不一样的概念。 旅游或许是为了看这世界</p>
+				<ul>
+					<li><a title="发表于18-05-17"><i class="el-time"></i>2018-05-17</a></li>
+					<li><a title="80次浏览"><i class="el-fire"></i>80</a></li>
+				</ul>
+			</div>
+		</li>
+
+		
+		</ul>
+</div>
+
+<!--文章排行tab-->
+<div class="mytab bg-color animation-div">
+	<div class="tab-btn"><a class="hd-btn tab-active" href="javascript:;"><i class="el-comment-alt"></i>留言评论</a><a class="ph-btn" href="javascript:;"><i class="el-signal"></i>文章排行</a></div>
+	<ul class="hudong-ul" id="hudong-ul">
+
+	<li>
+				<div class="sd-tx">
+				<a href="###" rel="nofollow" title="">
+						<img src="/plus/guestbook/images/01.gif" alt="仔仔2" class="img-circle"/>
+				</a>
+				</div>
+				<div class="sd-name">
+					<span><i class="el-user"></i>仔仔2<time >2018-05-30</time></span>
+					<a class="blue-text" href="###" title="回复：回复：俊仔到此一游" >回复：回复：俊仔到此一游</a>
+				</div>
+			</li><li>
+				<div class="sd-tx">
+				<a href="###" rel="nofollow" title="">
+						<img src="/plus/guestbook/images/01.gif" alt="赵本三" class="img-circle"/>
+				</a>
+				</div>
+				<div class="sd-name">
+					<span><i class="el-user"></i>赵本三<time >2018-05-30</time></span>
+					<a class="blue-text" href="###" title="回复：俊仔到此一游" >回复：俊仔到此一游</a>
+				</div>
+			</li><li>
+				<div class="sd-tx">
+				<a href="###" rel="nofollow" title="">
+						<img src="/plus/guestbook/images/14.gif" alt="无情" class="img-circle"/>
+				</a>
+				</div>
+				<div class="sd-name">
+					<span><i class="el-user"></i>无情<time >2018-05-25</time></span>
+					<a class="blue-text" href="###" title="网站加载有点慢哦" >网站加载有点慢哦</a>
+				</div>
+			</li><li>
+				<div class="sd-tx">
+				<a href="###" rel="nofollow" title="">
+						<img src="/plus/guestbook/images/15.gif" alt="刘凯桐" class="img-circle"/>
+				</a>
+				</div>
+				<div class="sd-name">
+					<span><i class="el-user"></i>刘凯桐<time >2018-05-25</time></span>
+					<a class="blue-text" href="###" title="长夜漫漫" >长夜漫漫</a>
+				</div>
+			</li><li>
+				<div class="sd-tx">
+				<a href="###" rel="nofollow" title="">
+						<img src="/plus/guestbook/images/01.gif" alt="郭哥" class="img-circle"/>
+				</a>
+				</div>
+				<div class="sd-name">
+					<span><i class="el-user"></i>郭哥<time >2018-05-25</time></span>
+					<a class="blue-text" href="###" title="好吧，总算上线了" >好吧，总算上线了</a>
+				</div>
+			</li><li>
+				<div class="sd-tx">
+				<a href="###" rel="nofollow" title="">
+						<img src="/plus/guestbook/images/01.gif" alt="俊仔" class="img-circle"/>
+				</a>
+				</div>
+				<div class="sd-name">
+					<span><i class="el-user"></i>俊仔<time >2018-05-24</time></span>
+					<a class="blue-text" href="###" title="俊仔到此一游" >俊仔到此一游</a>
+				</div>
+			</li>
+
+		</ul>
+
+	<!--文章排行-->
+	<ul class="paihang-ul">
+	<li><span></span><a href="/html/xs/22.html" title="两只蜗牛艰难又浪漫的一吻">两只蜗牛艰难又浪漫的一吻<b>(179)</b></a></li>
+<li><span></span><a href="/html/xs/20.html" title="反正我们不亏损了，所以可以任性一些">反正我们不亏损了，所以可以任性一些<b>(151)</b></a></li>
+<li><span></span><a href="/html/xs/18.html" title="听什么歌都像在唱自己？网易云音乐乐评真的出书了，打开瞬间泪奔">听什么歌都像在唱自己？网易云音乐乐评真的出书了，打开瞬间泪奔<b>(149)</b></a></li>
+<li><span></span><a href="/html/xs/5.html" title="我们共有过去，却各有未来">我们共有过去，却各有未来<b>(117)</b></a></li>
+<li><span></span><a href="/html/xs/19.html" title="那一只拯救世界的猴子">那一只拯救世界的猴子<b>(102)</b></a></li>
+
+	</ul>
+
+	</div>
+
+<!--标签-->
+	<div class="cloud bg-color animation-div">
+	    <h4 class="index-title"><i class="el-tags"></i>标签云<small>Tags Clouds</small></h4>
+		<ul id="3dcloud">
+		
+		<li>
+		<a style="font-size:11.388499919483px;color:#912d81"  class="tstyle-1" href="/tags.php?/%E4%BA%BA%E7%94%9F%E8%AF%AD%E5%BD%95/" title="人生语录(1)" >人生语录 (1)</a>
+		</li>
+		
+		<li>
+		<a style="font-size:14.928276878563px;color:#fa3f5d"  class="tstyle-1" href="/tags.php?/dedecms/" title="dedecms(3)" >dedecms (3)</a>
+		</li>
+		
+		<li>
+		<a style="font-size:16.529668952927px;color:#be3bd1"  class="tstyle-1" href="/tags.php?/HTML/" title="HTML(1)" >HTML (1)</a>
+		</li>
+		
+		</ul>
+	</div>
+</aside>
+<script>
+/*
+	$(function(){
+		$.ajax({
+			url:"/plus/guestbook_api.php",
+			type: "POST", 
+			dataType: "json",
+			success: function(data){
+				console.log(data);
+				var str = "";
+
+				var res = data.list;
+				console.log(res);
+				for (var i = 0; i < 5; i++) {
+					str +='<li>'+
+'			<div class="sd-tx">'+
+'			<a href="###" rel="nofollow" title="'+res[i].title+'">'+
+'					<img src="/plus/guestbook/images/'+res[i].face+'.gif"  class="img-circle"/>'+
+'			</a>'+
+'			</div>'+
+'			<div class="sd-name">'+
+'				<span><i class="el-user"></i>'+res[i].uname+'<time >'+res[i].dtime+'</time></span>'+
+'				<a class="blue-text" href="###" title="'+res[i].title+'" >'+res[i].title+'</a>'+
+'			</div>'+
+'		</li>';
+
+				}
+				$("#hudong-ul").html(str);
+			}
+		})
+	})
+*/
+</script>
+
+<!-- //右侧 -->
+
+</div>
+
+<!--主题框架结束-->
+
+<!---底部开始-->
+<footer>
+	<div class="footer-area">
+	<!--博客相关-->
+	<div class="about-blog">
+		<h4>素材排行</h4>
+		<div class="ft-part1">
+					<!--素材排行-->
+				<ul class="paihang-ul" style="display:block;width:100%;">
+				<li>
+					<span></span><a href="/html/web2/2.html" title="奇怪这个为什么不显示"> 奇怪这个为什么不显示<b>(191)</b></a>
+					</li>
+<li>
+					<span></span><a href="/html/shuoshuo/21.html" title="很久没有去电影院看电影了！"> 很久没有去电影院看电影了！<b>(182)</b></a>
+					</li>
+<li>
+					<span></span><a href="/html/xs/22.html" title="两只蜗牛艰难又浪漫的一吻"> 两只蜗牛艰难又浪漫的一吻<b>(179)</b></a>
+					</li>
+<li>
+					<span></span><a href="/html/web2/27.html" title="7种css设置div居中的方法,完美解决"> 7种css设置div居中的方法,完美解决<b>(165)</b></a>
+					</li>
+<li>
+					<span></span><a href="/html/xs/20.html" title="反正我们不亏损了，所以可以任性"> 反正我们不亏损了，所以可以任性<b>(151)</b></a>
+					</li>
+
+				</ul>
+		</div>
+	</div>
+
+	<!--最新留言-->
+	<div class="close-fd mob-hidden">
+		 <h4>留言频道</h4>
+		<ul>
+		<li>
+			<div class="sd-tx">
+				<a href="/plus/guestbook.php" rel="nofollow" title="去留言板看看?">
+
+					<img src="/plus/guestbook/images/01.gif" class="img-circle">
+				</a>
+			</div>
+			<div class="sd-name">
+				<span>仔仔2</span>
+				<a class="blue-text" href="/plus/guestbook.php" title="回复：回复：俊仔到此一游">回复：回复：俊仔到此一游</a>
+			</div>
+			</li><li>
+			<div class="sd-tx">
+				<a href="/plus/guestbook.php" rel="nofollow" title="去留言板看看?">
+
+					<img src="/plus/guestbook/images/01.gif" class="img-circle">
+				</a>
+			</div>
+			<div class="sd-name">
+				<span>赵本三</span>
+				<a class="blue-text" href="/plus/guestbook.php" title="回复：俊仔到此一游">回复：俊仔到此一游</a>
+			</div>
+			</li><li>
+			<div class="sd-tx">
+				<a href="/plus/guestbook.php" rel="nofollow" title="去留言板看看?">
+
+					<img src="/plus/guestbook/images/14.gif" class="img-circle">
+				</a>
+			</div>
+			<div class="sd-name">
+				<span>无情</span>
+				<a class="blue-text" href="/plus/guestbook.php" title="网站加载有点慢哦">网站加载有点慢哦</a>
+			</div>
+			</li>
+			</ul>
+	</div>
+
+
+
+	<!--图文频道-->
+
+	<div class="tuwen-pd mob-hidden">
+		<h4>博主相册</h4>
+		<ul>
+		
+		<li><a title='杨青个人博客' href='http://www.yangqq.com/' target='_blank'><img alt='杨青个人博客' src='/uploads/frdimg/1805281930522054.jpg' width='88' height='31' border='0'></a> </li>
+		
+		<li><a title='卢松松博客' href='http://lusongsong.com/' target='_blank'><img alt='卢松松博客' src='/uploads/frdimg/1805281954327225.jpg' width='88' height='31' border='0'></a> </li>
+		
+		</ul>
+	</div>
+		<!--数据统计-->
+
+	<div class="data-count ">
+
+		<h4>数据统计</h4>
+
+		<ul>
+
+
+			<li><span><i class="el-picture"></i>图片数量：</span><a title="共有 21 张图片">21</a> 张</li>
+
+			<li><span><i class="el-headphones"></i>说说数量：</span><a title="共有 62 条说说">62</a> 条</li>
+
+			<li><span><i class="el-pencil"></i>文章数量：</span><a title="共有16篇文章">16</a> 篇</li>
+
+			<li><span><i class="el-comment"></i>留言数量：</span><a title="共有 15 条留言">15</a> 条</li>
+
+			<li><span><i class="el-comment-alt"></i>评论数量：</span><a title="共有 7 条评论">7</a> 条</li>
+
+			<li><span><i class="el-paper-clip"></i>素材个数：</span><a title="共有 24 个">24</a> 个</li>
+
+			<li><span><i class="el-cog"></i>运行天数：</span><a id="show_date_time" title=""></a> 天</li>
+
+
+
+			<li><span><i class="el-adjust-alt"></i>访问统计：</span><a title="累计访问"></a> 次</li>
+
+
+
+			<!--<li><span><i class="el-arrow-up"></i>4天前 12:15</span><a title="晓晓 最后更新了文章" >更新了<b class="lable">文章</b></a></li>-->
+
+
+
+		</ul>
+
+	</div>
+
+
+
+	</div>
+
+	<!--底部导航-->
+
+	<div class="foot-nav">
+
+		<div class="copy-right"><span>CopyRight © 2015-2017 郭文明博客  Design by Andy</span></div>
+
+		<div class="bottom-nav">
+
+			<span><a href="/sitemap.html" target="_blank">网站地图</a>-<a target="_blank" href="http://www.miitbeian.gov.cn/"> 粤ICP备16001325号-1</a></span>
+
+		</div>
+
+	</div>
+
+<div id="toTop">Back to Top</div>
+
+<script>
+
+window.onload=function(){
+
+	$(".img_loading").removeClass("img_loading");
+
+	$(".silde-title").show();
+
+}
+
+</script>
+<script>
+// 网站运行天数
+$(function(){
+	var s1 = '2017-05-24';//设置为你的建站时间 
+	s1 = new Date(s1.replace(/-/g, "/")); 
+	s2 = new Date(); 
+	var days = s2.getTime() - s1.getTime(); 
+	var number_of_days = parseInt(days / (1000 * 60 * 60 * 24)); 
+	var $showtime = $("#show_date_time");
+	$showtime.text(number_of_days).attr('title','仔仔博客已正常运行'+number_of_days+'天');
+
+})
+</script>	
+</footer>
+<!-- 换肤 -->
+<!--
+
+
+<div class="select-skin">
+
+<div class="skin-btn">
+
+    <a href="javascript:void(0);" class="skin-btn-open">换<br>肤</a>
+
+</div>
+
+
+
+<div class="skin-content">
+
+    <h1>选择风格<span class="skin-close">关闭</span></h1>
+
+    <div class="skin-content-list">
+
+        <div class="skin-list"><a href="#" onclick="setActiveStyleSheet('qingxin'); return false;" class="btn1">清新</a></div>
+
+        <div class="skin-list"><a href="#" onclick="setActiveStyleSheet('jianyue'); return false;" class="btn2">简约</a></div>
+
+		 <div class="skin-list"><a href="#" onclick="setActiveStyleSheet('qingshuang'); return false;" class="btn3">清爽</a></div>
+
+    </div>
+
+</div>
+
+</div>
+
+-->
+
+
+
+<!---END 底部开始-->
+
+    <div class="hide_box"></div>
+
+    <div class="shang_box">
+
+    	<a class="shang_close" href="javascript:void(0)" onclick="dashangToggle()" title="关闭"><img src="http://www.d163.net/static/andy/images/icon/close.jpg" alt="取消"></a>
+
+        <img class="shang_logo" src="http://www.d163.net/static/andy/images/logo2.png" alt="仔仔">
+
+    	<div class="shang_tit">
+
+    		<p><a title="支付宝支付" href="###" class="orange-text" target="_blank">支付宝在线支付</a></p>
+
+    	</div>
+
+    	<div class="shang_payimg">
+
+    		<img src="http://www.d163.net/static/andy/images/alipayimg.jpg" alt="扫码查看" title="扫一扫">
+
+    	</div>
+
+
+
+    		<div class="pay_explain">1元=1金币，支付后关注公众号联系站长</div>
+
+
+
+    	<div class="shang_payselect">
+
+    		<div class="pay_item checked" data-id="alipay">
+
+	    		<span class="radiobox"></span>
+
+	    		<span class="pay_logo"><img src="http://www.d163.net/static/andy/images/icon/alipay.jpg" alt="支付宝"></span>
+
+    		</div>
+
+    		<div class="pay_item" data-id="weipay">
+
+	    		<span class="radiobox"></span>
+
+	    		<span class="pay_logo"><img src="http://www.d163.net/static/andy/images/icon/wechat.jpg" alt="微信"></span>
+
+    		</div>
+
+    	</div>
+
+    </div>
+
+ <!-- 手机端 -->
+ <div class="shang_box_wap">
+
+   <a class="shang_close" href="javascript:void(0)" onclick="dashangToggle()" title="关闭"><img src="http://www.d163.net/static/andy/images/icon/close.jpg" alt="取消"></a>
+   <div class="shang_tit">
+
+     <p>感谢您的支持，我会继续努力的!</p>
+
+   </div>
+
+   <div class="shang_payimg">
+
+     <img src="http://www.d163.net/static/andy/images/alipayimg.jpg" alt="扫码查看" title="扫一扫">
+
+   </div>
+
+
+     <div class="pay_explain">长按二维码打赏，你说多少就多少</div>
+
+
+   <div class="shang_payselect">
+
+     <div class="pay_item checked" data-id="alipay">
+
+       <span class="radiobox"></span>
+
+       <span class="pay_logo"><img src="http://www.d163.net/static/andy/images/icon/alipay.jpg" alt="支付宝"></span>
+
+     </div>
+
+     <div class="pay_item" data-id="weipay">
+
+       <span class="radiobox"></span>
+
+       <span class="pay_logo"><img src="http://www.d163.net/static/andy/images/icon/wechat.jpg" alt="微信"></span>
+
+     </div>
+
+   </div>
+
+ </div>
+<!-- 手机端end -->
+    <script type="text/javascript">
+
+    $(function(){
+
+    	$(".pay_item").click(function(){
+
+    		$(this).addClass('checked').siblings('.pay_item').removeClass('checked');
+
+    		var dataid=$(this).attr('data-id');
+
+    		$(".shang_payimg img").attr("src","http://www.d163.net/static/andy/images/icon/"+dataid+"img.jpg");
+
+    		$("#shang_pay_txt").text(dataid=="alipay"?"支付宝":"微信");
+
+    	});
+
+    });
+
+    function dashangToggle(){
+
+    	$(".hide_box").fadeToggle();
+      var is_pc=IsPC();
+      if(is_pc==true){
+        $(".shang_box").fadeToggle();
+      }else{
+         $(".shang_box_wap").fadeToggle();
+      }
+    }
+    // 判断是不是手机端
+    function IsPC() {
+        var userAgentInfo = navigator.userAgent;
+        var Agents = ["Android", "iPhone",
+                    "SymbianOS", "Windows Phone",
+                    "iPad", "iPod"];
+        var flag = true;
+        for (var v = 0; v < Agents.length; v++) {
+            if (userAgentInfo.indexOf(Agents[v]) > 0) {
+                flag = false;
+                break;
+            }
+        }
+        return flag;
+    }
+    </script>
+
+<script type="text/javascript">
+function dashangToggle2(){
+  $(".hide_box2").fadeToggle();
+  $(".shang_box2").fadeToggle();
+}
+</script>
+
+<script>
+//判断是不是手机端
+function IsPC() {
+    var userAgentInfo = navigator.userAgent;
+    var Agents = ["Android", "iPhone",
+                "SymbianOS", "Windows Phone",
+                "iPad", "iPod"];
+    var flag = true;
+    for (var v = 0; v < Agents.length; v++) {
+        if (userAgentInfo.indexOf(Agents[v]) > 0) {
+            flag = false;
+            break;
+        }
+    }
+    return flag;
+}
+var is_pc=IsPC();
+if(is_pc==false){
+	 $("#authorad").css('display','none');
+}
+</script>
+
+</body>
+</html>

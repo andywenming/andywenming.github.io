@@ -1,0 +1,1481 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>无人愿做「菊外人」</title>
+<meta name="keywords" content="" />
+<meta name="description" content="文 | 王雷柏 核心提示 王菊作为一种爆款现象，不完全是自然发酵的结果 在社区运营的过程中，是否能够形成自有的文化是成功与否的关键因素，而语言体系本身是文化最为表层的特征" />
+<meta name="author" content="Andy">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" user-scalable="no">
+<!--CSS-->
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<!--CSS-->
+<link rel="stylesheet" href="http://www.d163.net/static/andy/css/default.css">
+<link rel="stylesheet" href="http://www.d163.net/static/andy/css/public.css">
+<link rel="stylesheet" href="http://www.d163.net/static/andy/css/animation.css">
+
+<link rel="stylesheet" type="text/css" href="http://www.d163.net/static/andy/css/skin_1.css" title="qingxin">
+<link rel="stylesheet" type="text/css" href="http://www.d163.net/static/andy/css/skin_2.css" title="jianyue">
+<link rel="stylesheet" type="text/css" href="http://www.d163.net/static/andy/css/skin_3.css" title="qingshuang">
+<link rel="stylesheet" href="http://www.d163.net/static/andy/css/font-icon.css">
+<link rel="stylesheet" href="http://www.d163.net/static/andy/css/face.css">
+<!--JS-->
+
+<script type="text/javascript" src="http://www.d163.net/static/andy/js/jquery.2.1.4.min.js"></script>
+<script type="text/javascript" src="/include/dedeajax2.js"></script>
+<script>
+	$("html").append("<div class='jiazai'><img src='http://www.d163.net/static/andy/images/icon/loading3.gif'/><span>正在加载中请等待...</span></div>")
+
+</script>
+<script type="text/javascript" src="http://www.d163.net/static/andy/js/my.js"></script>
+
+<script type="text/javascript" src="http://www.d163.net/static/andy/js/superbg.min.js"></script>
+<script type="text/javascript" src="http://www.d163.net/static/andy/js/superbg-custom.js"></script>
+
+<script type="text/javascript" src="http://www.d163.net/static/andy/js/album.js"></script>
+<script type="text/javascript" src="http://www.d163.net/static/andy/js/tooltip.js"></script>
+<script type="text/javascript" src="http://www.d163.net/static/andy/js/face.js"></script>
+<script type="text/javascript" src="http://www.d163.net/static/andy/js/layer/layer.js"></script>
+<script type="text/javascript" src="http://www.d163.net/static/andy/js/checkform.js" charset="utf-8"></script>
+<!--[if lte IE 9]>
+	<script>window.location.href='http://cdn.dmeng.net/upgrade-your-browser.html?referrer='+location.href;</script>
+<![endif]-->
+<script type="text/javascript" src="http://www.d163.net/static/andy/js/index.js"></script>
+<script type="text/javascript" src="/include/dedeajax2.js"></script>
+<script language="javascript" type="text/javascript" src="/include/ckeditor/plugins/syntaxhighlight/code.js" ></script>
+<!-- 织梦技术研究中心 http://www.dedejs.com -->
+<link type="text/css" rel="stylesheet" href="/include/ckeditor/plugins/syntaxhighlight/styles/shCore.css"/>
+<link type="text/css" rel="stylesheet" href="/include/ckeditor/plugins/syntaxhighlight/styles/shThemeDefault.css"/>
+<script>
+  function CheckLogin(){
+      var taget_obj = document.getElementById('_ajax_feedback');
+      myajax = new DedeAjax(taget_obj,false,false,'','','');
+      myajax.SendGet2("/member/ajax_feedback.php");
+      DedeXHTTP = null;
+  }
+  function postBadGood(ftype,fid)
+  {
+    var taget_obj = document.getElementById(ftype+fid);
+    var saveid = GetCookie('badgoodid');
+    if(saveid != null)
+    {
+      var saveids = saveid.split(',');
+      var hasid = false;
+      saveid = '';
+      j = 1;
+      for(i=saveids.length-1;i>=0;i--)
+      {
+        if(saveids[i]==fid && hasid) continue;
+        else {
+          if(saveids[i]==fid && !hasid) hasid = true;
+          saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+          j++;
+          if(j==10 && hasid) break;
+          if(j==9 && !hasid) break;
+        }
+      }
+      if(hasid) { alert('您刚才已表决过了喔！'); return false;}
+      else saveid += ','+fid;
+      SetCookie('badgoodid',saveid,1);
+    }
+    else
+    {
+      SetCookie('badgoodid',fid,1);
+    }
+    myajax = new DedeAjax(taget_obj,false,false,'','','');
+    myajax.SendGet2("/plus/feedback.php?aid="+fid+"&action="+ftype+"&fid="+fid);
+  }
+  function postDigg(ftype,aid)
+  {
+    var taget_obj = document.getElementById('newdigg');
+    var saveid = GetCookie('diggid');
+    if(saveid != null)
+    {
+      var saveids = saveid.split(',');
+      var hasid = false;
+      saveid = '';
+      j = 1;
+      for(i=saveids.length-1;i>=0;i--)
+      {
+        if(saveids[i]==aid && hasid) continue;
+        else {
+          if(saveids[i]==aid && !hasid) hasid = true;
+          saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+          j++;
+          if(j==20 && hasid) break;
+          if(j==19 && !hasid) break;
+        }
+      }
+      if(hasid) { alert("您已经顶过该帖，请不要重复顶帖 ！"); return; }
+      else saveid += ','+aid;
+      SetCookie('diggid',saveid,1);
+    }
+    else
+    {
+      SetCookie('diggid',aid,1);
+    }
+    myajax = new DedeAjax(taget_obj,false,false,'','','');
+    var url = "/plus/digg_ajax.php?action="+ftype+"&id="+aid;
+    myajax.SendGet2(url);
+  }
+  function getDigg(aid)
+  {
+    var taget_obj = document.getElementById('newdigg');
+    myajax = new DedeAjax(taget_obj,false,false,'','','');
+    myajax.SendGet2("/plus/digg_ajax.php?id="+aid);
+    DedeXHTTP = null;
+  }
+</script>
+
+</head>
+<body class="nobg">
+<!--导航开始-->
+<header class="myheader">
+	<div class="top">
+		<!--头像左边部分-->
+		<div class="top-left">
+		  <div class="logo"><a href="/"><img src="http://www.d163.net/static/andy/images/logo3.gif"></a></div>
+				<!--滚动消息-->
+			<div class="web-xiaoxi">
+				<i class="el-speaker"></i>
+				<ul class="mulitline">
+				<li>内容如有侵犯，请立即联系管理员删除</li>
+				<li>做了一些小调整，使之看起来更像博客。</li>
+				<li>本站提供丰富的素材下载，有源码、模板、插件...</li>
+				</ul>
+			</div>
+				<!--END 消息 -->
+
+			<!--手机菜单按钮-->
+			<div class="mobile-nav"><i class="el-lines"></i><i class="el-remove"></i></div>
+		</div>
+	<!--电脑导航开始-->
+		<nav class="mynav">
+			<ul class="orange-text">
+				<li  class=' ' ><a href="/" title="主页">主页</a></li>
+				<li class="drop ">
+				<a title="说说" href="/html/shuoshuo/">说说</a>
+				<div class="drop-nav orange-text">
+					<ul>
+					
+					</ul>
+				</div>
+				</li><li class="drop nav-active">
+				<a title="慢生活" href="/html/life/">慢生活</a>
+				<div class="drop-nav orange-text">
+					<ul>
+					
+					<li class="menulist-sub-item"><a title="欣赏" href="/html/xs/">欣赏</a></li>
+					
+					<li class="menulist-sub-item"><a title="前端技术" href="/html/web/">前端技术</a></li>
+					
+					<li class="menulist-sub-item"><a title="互联网资讯" href="/html/internet/">互联网资讯</a></li>
+					
+					</ul>
+				</div>
+				</li><li class="drop ">
+				<a title="学无止境" href="/html/study/">学无止境</a>
+				<div class="drop-nav orange-text">
+					<ul>
+					
+					<li class="menulist-sub-item"><a title="web前端" href="/html/web2/">web前端</a></li>
+					
+					<li class="menulist-sub-item"><a title="PHP" href="/html/php/">PHP</a></li>
+					
+					</ul>
+				</div>
+				</li><li class="drop ">
+				<a title="留言" href="/plus/guestbook.php">留言</a>
+				<div class="drop-nav orange-text">
+					<ul>
+					
+					</ul>
+				</div>
+				</li><li class="drop ">
+				<a title="关于" href="/html/about/about.html">关于</a>
+				<div class="drop-nav orange-text">
+					<ul>
+					
+					</ul>
+				</div>
+				</li>
+				
+			</ul>
+			 <!--移动的滑动-->
+        <div class="move-bg"></div>
+        <!--移动的滑动 end-->
+		</nav>
+		 <!--会员登录-->
+		<div class="vip" style="width: 4%;float: right;text-align: right;">
+			<a href="javascript:;" onclick="comment(this)"><img class="img-circle" src="http://www.d163.net/static/andy/images/icon/default_head_img.gif" alt="仔仔博客" title="仔仔博客" style="margin-top: 17px;"></a>
+		</div>
+	 <!--会员登录-->
+		<!--这里是手机导航-->
+		<div class="mob-menu">
+		<!--手机顶部搜索-->
+			<div class="search ">
+				<ul class="loginwap-third-list">
+                <li><a class="weixin-login" title="微信账号登录" href="http://www.100txy.com/Home/User/oauth_login/type/wechat.html"></a></li>
+                <li><a class="qq-login" title="QQ账号登录" href="http://www.100txy.com/Home/User/oauth_login/type/qq.html"></a></li>
+                <li style="margin-right: 0!important;"><a class="weibo-login" title="新浪微博账号登录" href="http://www.100txy.com/Home/User/oauth_login/type/sina.html"></a></li>
+        </ul>
+			</div>
+			<!--手机下拉菜单-->
+			<ul class="mob-ulnav">
+				<li class="nav-active"><a href="/">首页</a></li>
+				<li class="">
+				<a title="说说" href="/html/shuoshuo/">说说</a>
+				<div class="drop-nav orange-text">
+					<ul>
+					
+					</ul>
+				</div>
+				</li><li class="nav-active">
+				<a title="慢生活" href="/html/life/">慢生活</a>
+				<div class="drop-nav orange-text">
+					<ul>
+					
+					<li class="menulist-sub-item"><a title="欣赏" href="/html/xs/">欣赏</a></li>
+					
+					<li class="menulist-sub-item"><a title="前端技术" href="/html/web/">前端技术</a></li>
+					
+					<li class="menulist-sub-item"><a title="互联网资讯" href="/html/internet/">互联网资讯</a></li>
+					
+					</ul>
+				</div>
+				</li><li class="">
+				<a title="学无止境" href="/html/study/">学无止境</a>
+				<div class="drop-nav orange-text">
+					<ul>
+					
+					<li class="menulist-sub-item"><a title="web前端" href="/html/web2/">web前端</a></li>
+					
+					<li class="menulist-sub-item"><a title="PHP" href="/html/php/">PHP</a></li>
+					
+					</ul>
+				</div>
+				</li><li class="">
+				<a title="留言" href="/plus/guestbook.php">留言</a>
+				<div class="drop-nav orange-text">
+					<ul>
+					
+					</ul>
+				</div>
+				</li><li class="">
+				<a title="关于" href="/html/about/about.html">关于</a>
+				<div class="drop-nav orange-text">
+					<ul>
+					
+					</ul>
+				</div>
+				</li>
+			</div>
+	</div>
+</header>
+<!--导航结束-->
+
+<!--主题框架开始-->
+<div class="container">
+<!--左侧开始-->
+	<section class="mysection">
+	<article>
+		<div class="mbnav"><i class="el el-home"></i><a href="/" title="">首页</a>&gt;<a href="/html/xs/">欣赏</a>&gt;正文</div>
+		<h3 class="arc-title index-title">无人愿做「菊外人」</h3>
+
+		<div class="post-line bg-color">
+
+			<ul>
+
+				<li><a title="admin发表于1527697118"><i class="el-time"></i><time>2018-05-31</time></a></li>
+
+				<li><a href="###" title="本文作者：admin"><i class="el-user"></i>admin</a></li>
+
+				<li><a href="#postform" title="转到评论"><i class="el-comment"></i> 0条</a></li>
+
+				<li><a title="已有 75 次浏览"><i class="el-eye-open"></i>(75)</a></li>
+
+			</ul>
+
+		</div>
+		
+		
+		<div class="article-content bg-color">
+
+
+			<!-- <div class="article-content bg-color" id="Hotbg"> -->
+
+			<!--文章正文-->
+
+			<div class="article-body">
+				<p style="margin: 0px 1em; padding: 0px; max-width: 100%; clear: both; min-height: 1em; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; letter-spacing: 0.544px; text-align: justify; line-height: 1.75em; box-sizing: border-box !important; word-wrap: break-word !important;">
+	<strong style="letter-spacing: 0.544px; margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important;"><span style="margin: 0px; padding: 0px; max-width: 100%; font-size: 15px; color: rgb(102, 102, 102); box-sizing: border-box !important; word-wrap: break-word !important;"><img alt="" src="/uploads/allimg/180531/1-1P531002424296.jpg" style="width: 665px; height: 371px;" /></span></strong><br />
+	<strong style="margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important;"><span style="margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important; font-size: 15px; color: rgb(102, 102, 102);">文 | 王雷柏</span></strong><br style="margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important;" />
+	<strong style="color: rgb(66, 133, 244); letter-spacing: 0.544px; margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important;">核心提示</strong></p>
+<ul class="list-paddingleft-2" style="margin: 0px; padding-right: 0px; padding-left: 2.2em; max-width: 100%; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; letter-spacing: 0.544px; text-align: justify; box-sizing: border-box !important; word-wrap: break-word !important;">
+	<li style="margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important;">
+		<p style="margin: 0px 0em 10px; padding: 0px; max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important; clear: both; min-height: 1em; line-height: 1.75em;">
+			<span style="margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important; color: rgb(102, 102, 102);">王菊作为一种爆款现象，不完全是自然发酵的结果</span></p>
+	</li>
+	<li style="margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important;">
+		<p style="margin: 0px 0em 10px; padding: 0px; max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important; clear: both; min-height: 1em; line-height: 1.75em;">
+			<span style="margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important; color: rgb(102, 102, 102);">在社区运营的过程中，是否能够形成自有的文化是成功与否的关键因素，而语言体系本身是文化最为表层的特征和体现</span></p>
+	</li>
+	<li style="margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important;">
+		<p style="margin: 0px 0em 10px; padding: 0px; max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important; clear: both; min-height: 1em; line-height: 1.75em;">
+			<span style="margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important; color: rgb(102, 102, 102);">广告主更多在乎的是结果，即&ldquo;从小众走向泛化&rdquo;的这一步</span></p>
+		<p style="margin: 0px 0em 10px; padding: 0px; max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important; clear: both; min-height: 1em; line-height: 1.75em;">
+			&nbsp;</p>
+	</li>
+</ul>
+<p style="margin: 0px 1em 25px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; letter-spacing: 0.544px; text-align: justify; line-height: 1.75em; box-sizing: border-box !important; word-wrap: break-word !important;">
+	<strong style="margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important;">&ldquo;已经有三家左右的品牌邀请王菊成为中插广告的主角，其中包括一些国际品牌。她的广告有可能会在此后几期直至总决赛的时候播放&rdquo;</strong>，一位接近《创造101》节目组的品牌方人员告诉36氪。</p>
+<p style="margin: 0px 1em 25px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; letter-spacing: 0.544px; text-align: justify; line-height: 1.75em; box-sizing: border-box !important; word-wrap: break-word !important;">
+	哪怕半个月前，也没有人会想到王菊会是一个现象级icon般的存在，这股风潮来得气势汹汹，异常猛烈。正如我们昨天刚要关注王菊现象，就发现在过去24小时里，无数公众号已经普及连带信息轰炸了一遍王菊到底是怎么火起来的。</p>
+<p style="margin: 0px 1em 25px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; letter-spacing: 0.544px; text-align: justify; line-height: 1.75em; box-sizing: border-box !important; word-wrap: break-word !important;">
+	&ldquo;我做了什么，给我推了一整天的王菊。&rdquo;这是一位用户在即刻上的留言，观点大概可以代表许多被动裹挟进这场社交网络舆论狂欢的人，这其中很有可能也包括你。</p>
+<p style="margin: 0px 1em 25px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; letter-spacing: 0.544px; text-align: justify; line-height: 1.75em; box-sizing: border-box !important; word-wrap: break-word !important;">
+	伴随王菊在《创造101》起起伏伏的晋级历程，最早是人们在弹幕中毫不掩饰的恶意，不少人希望看到她被淘汰；<strong style="margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important;">但最近两周情况突变，她从全网黑蜕变为不少人坚决拥护的偶像，&ldquo;黑到深处自然粉&rdquo;说的就是这种状态。</strong></p>
+<p style="margin: 0px 1em 25px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; letter-spacing: 0.544px; text-align: justify; line-height: 1.75em; box-sizing: border-box !important; word-wrap: break-word !important;">
+	一些数据大概能说明王菊当下在人气上的强势：在被戏称为&ldquo;牙膏投票&rdquo;的中华魔丽迅白发起的榜单中，位列第四；在小红书发起的pick榜中，位列第二；而在由英树发起的榜单上，王菊更攀上过首位。</p>
+<p style="margin: 0px 1em 25px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; letter-spacing: 0.544px; text-align: justify; line-height: 1.75em; box-sizing: border-box !important; word-wrap: break-word !important;">
+	这当然不全是自然发酵的结果，基于不同目的涌来的王菊粉丝们已经组成了具有不错的应援力的组织。他们有着自己专属的亚文化和语言体系，在36氪进入的一个粉丝群中，大部分成员都为自己取了一个带&ldquo;菊&rdquo;的昵称，王菊自身的表情包和由此衍生的语言成为了群内成员沟通的&ldquo;通货&rdquo;。</p>
+<p style="margin: 0px 1em 25px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; letter-spacing: 0.544px; text-align: justify; line-height: 1.75em; box-sizing: border-box !important; word-wrap: break-word !important;">
+	&ldquo;事无菊细&rdquo;是指为王菊投票的任何细节都不能错过；&ldquo;多此一菊&rdquo;说的是&ldquo;多给王菊投一票，才是最好的&rdquo;；&ldquo;老奸菊猾&rdquo;讲的是老在群里潜水都不愿意投票的奸细连王菊听了都滑稽；<strong style="margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important;">而&ldquo;菊外人&rdquo;则是专门指代那些不看《创造101》、也不给王菊投票的人。</strong></p>
+<p style="margin: 0px 1em; padding: 0px; max-width: 100%; clear: both; min-height: 1em; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; letter-spacing: 0.544px; text-align: justify; box-sizing: border-box !important; word-wrap: break-word !important;">
+	&nbsp;</p>
+<p style="margin: 0px 1em 25px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; letter-spacing: 0.544px; text-align: justify; line-height: 1.75em; box-sizing: border-box !important; word-wrap: break-word !important;">
+	在社区运营的过程中，是否能够形成自有的文化是成功与否的关键因素，而语言体系本身是文化最为表层的特征和体现。在更早的时候，随着&ldquo;李毅大帝&rdquo;大火的&ldquo;帝吧&rdquo;就成为了&ldquo;屌丝&rdquo;群体的发声渠道，&ldquo;帝吧出征、寸草不生&rdquo;等短语成为了群体成员间彼此确认和认同的利器；当前增长势头不错的抖音，则在语言体系中加入了音乐的要素，不同的音乐代表着不同的情景甚至情节反转，人们能感知到彼此希望表达的情绪和内容。</p>
+<p style="margin: 0px 1em 25px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; letter-spacing: 0.544px; text-align: justify; line-height: 1.75em; box-sizing: border-box !important; word-wrap: break-word !important;">
+	&ldquo;陶渊明（王菊粉丝的自称）&rdquo;们彼此确认的方式要简单得多，所有带&ldquo;菊&rdquo;的字句以及王菊本人的表情包即是全部。</p>
+<p style="margin: 0px 1em 25px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; letter-spacing: 0.544px; text-align: justify; line-height: 1.75em; box-sizing: border-box !important; word-wrap: break-word !important;">
+	<strong style="margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important;">这一点与早前围绕着蔡依林形成的&ldquo;淋文化&rdquo;颇为类似</strong>，当时全网出现了大量以蔡依林为原型生产出的图片、语言等恶搞内容，并且也同样产出了自己的语言体系&mdash;&mdash;&ldquo;淋语&rdquo;：例如形容说话惹人厌的女生为&ldquo;路人甲&rdquo;（取自《花蝴蝶》的歌词）；形容为了追求自己心爱的事物甘愿铤而走险为&ldquo;走钢索&rdquo;（取自《美人计》的歌词）；以及称那些充满强烈自信的、有着独特个人风格的美人为&rdquo;花蝴蝶&rdquo;等等。</p>
+<p style="margin: 0px 1em 25px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; letter-spacing: 0.544px; text-align: justify; line-height: 1.75em; box-sizing: border-box !important; word-wrap: break-word !important;">
+	很难说&ldquo;淋文化&rdquo;的早期发起者带有善意，但事实上，最终在粉丝（包括黑粉）和明星之间的不断互动中，结果往往又趋于良性。浙江大学一位研究者在系统研究&ldquo;淋文化&rdquo;后就提出，这一文化最终从恶意走向善意、从狂躁走向冷静、从小众走向泛化，明星本人也从沉默走向接纳。</p>
+<p style="margin: 0px 1em 25px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; letter-spacing: 0.544px; text-align: justify; line-height: 1.75em; box-sizing: border-box !important; word-wrap: break-word !important;">
+	这四个特性与当前王菊现象在社交媒体中的发酵极为类似。当人们早前嘲笑着说&ldquo;地狱空荡荡，王菊在土创&rdquo;时，王菊自己也在节目中自嘲式地提到这句话，这一&ldquo;接纳&rdquo;网民嘲讽的姿态反而加速了她本身被人们重新接受的程度。</p>
+<p style="margin: 0px 1em; padding: 0px; max-width: 100%; clear: both; min-height: 1em; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; letter-spacing: 0.544px; text-align: justify; box-sizing: border-box !important; word-wrap: break-word !important;">
+	&nbsp;</p>
+<p style="margin: 0px 1em 25px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; letter-spacing: 0.544px; text-align: justify; line-height: 1.75em; box-sizing: border-box !important; word-wrap: break-word !important;">
+	&ldquo;其实关心欧美娱乐圈的人和LGBT人群是推波助澜的关键角色。LGBT人群之所以喜欢她，是因为王菊走过了从不被接受到被人们喜欢的过程，这是LGBT人群正在经历的&rdquo;，一位&ldquo;陶渊明&rdquo;这样告诉36氪。</p>
+<p style="margin: 0px 1em 25px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; letter-spacing: 0.544px; text-align: justify; line-height: 1.75em; box-sizing: border-box !important; word-wrap: break-word !important;">
+	但广告主更多在乎的是结果，即&ldquo;从小众走向泛化&rdquo;的这一步。与蔡依林等明星不同，王菊本质上仍然是一个素人，这种突然的现象级效应让品牌们看到的是商业价值的开发。</p>
+<p style="margin: 0px 1em 25px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; letter-spacing: 0.544px; text-align: justify; line-height: 1.75em; box-sizing: border-box !important; word-wrap: break-word !important;">
+	&ldquo;如果现在像品牌推荐合作人选，我会选择王菊，当然要在保证王菊的形象和产品品类相符的情况下，譬如母婴用品就不太符合&rdquo;，一位广告营销界业内人士表示。</p>
+<p style="margin: 0px 1em 25px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; letter-spacing: 0.544px; text-align: justify; line-height: 1.75em; box-sizing: border-box !important; word-wrap: break-word !important;">
+	她认为当前品牌方如果能借势王菊的热度当然是一件划算的事情，王菊本身表露出的女性自信的态度以及洒脱的人生观，会让她颇受一些潮牌的欢迎，因此有广告主迅速跟进希望在《创造101》中插广告中启用她成为代言人也并不奇怪。</p>
+<p style="margin: 0px 1em 25px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; letter-spacing: 0.544px; text-align: justify; line-height: 1.75em; box-sizing: border-box !important; word-wrap: break-word !important;">
+	&ldquo;毕竟，现在的广告营销竞争都快开始以小时计算的。&rdquo;她说。</p>
+<p style="margin: 0px 1em 25px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; letter-spacing: 0.544px; text-align: justify; line-height: 1.75em; box-sizing: border-box !important; word-wrap: break-word !important;">
+	《创造101》的品牌合作方们从中受益颇丰，前述中华魔丽炫白、小红书和英树之所以能够发起榜单正是因为它们的赞助商身份。<strong style="margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important;">而据接近腾讯视频的人士透露，《创造101》仅广告招商一项应该至少进账4至5亿元。</strong></p>
+<p style="margin: 0px 1em 25px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; letter-spacing: 0.544px; text-align: justify; line-height: 1.75em; box-sizing: border-box !important; word-wrap: break-word !important;">
+	毫无疑问，腾讯视频和赞助商间因为节目的火热形成了&ldquo;双赢&rdquo;的局面。</p>
+<p style="margin: 0px 1em 25px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; letter-spacing: 0.544px; text-align: justify; line-height: 1.75em; box-sizing: border-box !important; word-wrap: break-word !important;">
+	赞助商本身拥有的中插广告权益成为了参赛选手们宝贵的露出机会，要想从101个女生中获得露面的机会实属不易，但如果不能获得关注就很难赢得人们的投票。在这种投票起着关键性作用的选秀节目中，15至45秒的中插广告展示机会对于&ldquo;王菊&rdquo;们来说非常重要。</p>
+<p style="margin: 0px 1em 25px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; letter-spacing: 0.544px; text-align: justify; line-height: 1.75em; box-sizing: border-box !important; word-wrap: break-word !important;">
+	根据前述品牌方人士介绍，《创造101》中插广告的拍摄人选一般由腾讯视频提供几个选项，最终由品牌方定夺最终人选。但在一些特殊情况下，品牌方也可以直接决定拍摄人选。不管通过何种方式，选手人气仍然是最为重要的关键性指标，因此王菊的逆势上扬让她进入了品牌方的视野。</p>
+<p style="margin: 0px 1em 25px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; letter-spacing: 0.544px; text-align: justify; line-height: 1.75em; box-sizing: border-box !important; word-wrap: break-word !important;">
+	另外，由不同渠道发起的投票本身也设置了相关权益，排名首位的选手可以独享。例如中华魔丽炫白发起的榜单给出的权益是成为品牌代言人，腾讯视频自身榜单给出的权益是北京国贸CBD大屏和App开屏图。除此之外，英树给出的则是地铁广告位，因此粉丝们将这个榜单俗称为&ldquo;地铁投票&rdquo;。对于参赛选手而言，这些权益都是其增加知名度并进入下一轮的宝贵资源。</p>
+<p style="margin: 0px 1em 25px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; letter-spacing: 0.544px; text-align: justify; line-height: 1.75em; box-sizing: border-box !important; word-wrap: break-word !important;">
+	事实上，在这种相互借力的关系中，&ldquo;陶渊明&rdquo;们强大的应援力和组织力已经让一些品牌获益。在36氪所在的粉丝群中，已有不少粉丝询问如何通过小红书进行投票，得到的回复大多是&ldquo;下载App进入专属页面&rdquo;。在获客成本高企的背景下，<strong style="margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important;">这种效果不错的自然流量导入就省去了大量的营销开支，与此同时还收割了社交平台的流量裂变效果。</strong></p>
+<p style="margin: 0px 1em; padding: 0px; max-width: 100%; clear: both; min-height: 1em; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; letter-spacing: 0.544px; text-align: justify; box-sizing: border-box !important; word-wrap: break-word !important;">
+	&nbsp;</p>
+<p style="margin: 0px 1em 25px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; letter-spacing: 0.544px; text-align: justify; line-height: 1.75em; box-sizing: border-box !important; word-wrap: break-word !important;">
+	<strong style="margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important;">还有一些品牌搭上了便车，比如可爱多。</strong>由于其与腾讯视频进行合作，发起了每买一支可爱多，送一天腾讯会员的活动，不少粉丝已经表态要在6月2日点赞通道重新开启的当天进行购买，因为腾讯会员每天可以为每位参赛选手投出11票。</p>
+<p style="margin: 0px 1em; padding: 0px; max-width: 100%; clear: both; min-height: 1em; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; letter-spacing: 0.544px; text-align: justify; box-sizing: border-box !important; word-wrap: break-word !important;">
+	&nbsp;</p>
+<p style="margin: 0px 1em 25px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; letter-spacing: 0.544px; text-align: justify; line-height: 1.75em; box-sizing: border-box !important; word-wrap: break-word !important;">
+	这种现象与2005年《超级女声》的大火如出一辙，彼时的蒙牛酸酸乳也借由相似的刺激投票的路径获得了大量销售。视频播出平台方希望节目拥有话题点，广告主希望刺激产品销售，参赛选手又需要视频播出平台和广告主给予的出镜机会，一连串游戏机制的巧妙设计让多方绑在了一条船上，而王菊凭借着自己的实力以及多多少少的运气成为了当前的幸运儿。</p>
+<p style="margin: 0px 1em 25px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; letter-spacing: 0.544px; text-align: justify; line-height: 1.75em; box-sizing: border-box !important; word-wrap: break-word !important;">
+	<strong style="margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important;">&ldquo;我不太相信这完全是粉丝自发的行为，多少在早期也有经纪公司或者腾讯本身的引导&rdquo;，</strong>一位曾有视频网站工作经历的人这样表示。他的理由是《创造101》的文案是&ldquo;逆风翻盘，向阳而生&rdquo;，此前的杨超越和当前的王菊正是表达这种价值观的合适人选。但一位接近腾讯内部的人员并不认同这种说法，他表示&ldquo;内部并没有操作过（相关议题）&rdquo;。</p>
+<p style="margin: 0px 1em 25px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; letter-spacing: 0.544px; text-align: justify; line-height: 1.75em; box-sizing: border-box !important; word-wrap: break-word !important;">
+	但互联网从来都是一个喜新厌旧的平台，人们总是因为追逐下一个关注点，而忽略掉他们曾经追逐过的话题。这对王菊来说是个挑战，眼下她暂时摆脱了被淘汰的厄运，但大部分接受采访的对象仍然表示&ldquo;以女团出道并非是她最好的选择&rdquo;。</p>
+<p style="margin: 0px 1em 25px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; letter-spacing: 0.544px; text-align: justify; line-height: 1.75em; box-sizing: border-box !important; word-wrap: break-word !important;">
+	但现实是，她的影响力与《创造101》被紧密勾连在了一起。失去这一平台，广告主对她是否会持续青睐仍不确定。&ldquo;人们多少会对甜美、可爱、漂亮这种千篇一律的女团形象厌烦，所以王菊在对比下就拥有了人设&mdash;&mdash;独立、自信、果敢。但是否立得住以及怎么立决定了她以后影响力的长短。&rdquo;一位&ldquo;陶渊明&rdquo;冷静地表示。</p>
+<p style="margin: 0px 1em 25px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; letter-spacing: 0.544px; text-align: justify; line-height: 1.75em; box-sizing: border-box !important; word-wrap: break-word !important;">
+	<strong style="margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important;">&ldquo;她会成为下一个吴莫愁吗？这么优秀的人敌不过市场是件可惜的事情。&rdquo;他反问道。</strong></p>
+<p style="margin: 0px 1em 25px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; letter-spacing: 0.544px; text-align: justify; line-height: 1.75em; box-sizing: border-box !important; word-wrap: break-word !important;">
+	没有品牌想当菊外人，暂时，是这样。</p>
+
+			</div>
+
+				<!--END 文章正文 -->
+
+				<!-- 分享 -->
+
+				<div class="article-fx"><span class="img-circle" href="javascript:void(0)" onclick="dashangToggle()">打赏</span>&nbsp;&nbsp;&nbsp;<a class="fx-btn img-circle" href="javascript:;">分享</a>
+
+					<div class="bd-fx arc-bdfx">
+
+						<i class="el-remove fx-close"></i>
+
+						<ul class="bdsharebuttonbox bdshare-button-style1-32" data-bd-bind="1526835575382">
+
+							<li><a href="http://www.100txy.com/article/17.html#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></li>
+
+							<li><a href="http://www.100txy.com/article/17.html#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a></li>
+
+							<li><a href="http://www.100txy.com/article/17.html#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a></li>
+
+							<li><a href="http://www.100txy.com/article/17.html#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a></li>
+
+						</ul>
+						<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"32"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+					</div>
+
+				</div>
+				<!--END 分享-->
+			<hr>
+
+				<!--标签-->
+				<div class="article_tag">
+          <ul>
+				
+						<li><a href="/html/xs/" title="归类：欣赏">欣赏</a></li>
+						<li>
+			            <a class="b-tag-name" title="标签：工程师" href="###"></a>
+							</li>
+
+						</ul>
+        </div>
+
+			</div>
+
+	</article>
+
+
+
+	<!--上一篇，下一篇-->
+
+	<div class="shangyip bg-color">
+	<span><i class="el-arrow-up"></i>上一篇：<a href='/html/xs/23.html'>念在天涯，心在咫尺</a> </span>
+	<span><i class="el-arrow-down"></i>下一篇：没有了 </span>
+	</div>
+
+<!--随机推荐-->
+<div class="maybe-love">
+
+	<h4 class="index-title"><i class="el-heart"></i>您还可能喜欢</h4>
+
+	<ul>
+		<li>
+
+			<a href="/html/xs/23.html">
+
+			<img src="/uploads/allimg/180518/1-1P51P052590-L.jpg" alt="念在天涯，心在咫尺" title="念在天涯，心在咫尺">
+
+			<span>念在天涯，心在咫尺</span>
+
+			</a>
+
+		</li>
+<li>
+
+			<a href="/html/xs/22.html">
+
+			<img src="/uploads/allimg/180527/180527/1-1P52H05409358.jpg" alt="两只蜗牛艰难又浪漫的一吻" title="两只蜗牛艰难又浪漫的一吻">
+
+			<span>两只蜗牛艰难又浪漫的一吻</span>
+
+			</a>
+
+		</li>
+<li>
+
+			<a href="/html/xs/20.html">
+
+			<img src="/uploads/allimg/180526/1-1P526025Z30-L.jpg" alt="反正我们不亏损了，所以可以任性" title="反正我们不亏损了，所以可以任性">
+
+			<span>反正我们不亏损了，所以可以任性</span>
+
+			</a>
+
+		</li>
+<li>
+
+			<a href="/html/xs/19.html">
+
+			<img src="/uploads/allimg/180526/180526/1-1P526024112F8.jpg" alt="那一只拯救世界的猴子" title="那一只拯救世界的猴子">
+
+			<span>那一只拯救世界的猴子</span>
+
+			</a>
+
+		</li>
+ 
+
+	</ul>
+
+</div>
+
+<!-- 通用评论开始 -->
+<!-- //主模板必须要引入/include/dedeajax2.js -->
+<a name='postform'></a>
+<div class="mt1">
+		<dl class="tbox">
+		<dt>
+			<strong>发表评论</strong>
+			<span class="more"></span>
+		</dt>
+		<dd>
+		<div class="andy_comment_post">
+	        <form action="#" method="post" name="feedback">
+	        <input type="hidden" name="dopost" value="send" />
+	        <input type="hidden" name="comtype" value="comments">
+	        <input type="hidden" name="aid" value="26" />
+	        <input type="hidden" name="fid" id='feedbackfid' value="0" />
+	        <div class="dcmp-title">
+				<small>请自觉遵守互联网相关的政策法规，严禁发布色情、暴力、反动的言论。</small>
+			</div><!-- /dcmp-title -->
+			<div class="dcmp-stand">
+				<strong>评价:</strong>
+					<span><input type="radio" name="feedbacktype" checked="1" value="good" id="dcmp-stand-good" /><label for="dcmp-stand-good"><img src="http://www.d163.net/static/andy/images/cmt-good.gif" />好评</label></span>
+					<span><input type="radio" name="feedbacktype" value="feedback" id="dcmp-stand-neu" /><label for="dcmp-stand-neu"><img src="http://www.d163.net/static/andy/images/cmt-neu.gif" />中立</label></span>
+					<span><input type="radio" name="feedbacktype" value="bad" id="dcmp-stand-bad" /><label for="dcmp-stand-bad"><img src="http://www.d163.net/static/andy/images/cmt-bad.gif" />差评</label></span>
+			</div><!-- /dcmp-stand -->
+            <div class="clr"></div>
+                        <script type="text/javascript">
+            					//<![CDATA[
+            					window.CKEDITOR_BASEPATH='/include/ckeditor/';
+            					//]]>
+                        </script>
+            <script type="text/javascript" src="/include/ckeditor/ckeditor.js?t=B8DJ5M3"></script>
+            <div class="dcmp-content">
+            	<textarea style="width: 96%;" id="msg" name="msg" rows="5" class="ipt-txt"></textarea>
+            </div>
+            <div class="dcmp-mood">
+				<strong>表情:</strong>
+				<!-- <ul>            
+						<li><input  type="radio" name="face" value="1" checked="1" /><img src="/images/mood/ico-mood-1.gif" /></li><li><input  type="radio" name="face" value="2" /><img src="/images/mood/ico-mood-2.gif" /></li><li><input  type="radio" name="face" value="3" /><img src="/images/mood/ico-mood-3.gif" /></li><li><input  type="radio" name="face" value="4" /><img src="/images/mood/ico-mood-4.gif" /></li><li><input  type="radio" name="face" value="5" /><img src="/images/mood/ico-mood-5.gif" /></li><li><input  type="radio" name="face" value="6" /><img src="/images/mood/ico-mood-6.gif" /></li><li><input  type="radio" name="face" value="7" /><img src="/images/mood/ico-mood-7.gif" /></li><li><input  type="radio" name="face" value="8" /><img src="/images/mood/ico-mood-8.gif" /></li><li><input  type="radio" name="face" value="9" /><img src="/images/mood/ico-mood-9.gif" /></li><li><input  type="radio" name="face" value="10" /><img src="/images/mood/ico-mood-10.gif" /></li><li><input  type="radio" name="face" value="11" /><img src="/images/mood/ico-mood-11.gif" /></li>                   
+				</ul> -->
+
+				<img src="/images/mood/ico-mood-1.gif" onclick="document.getElementById('msg').value+='{s:10}';" /> 
+				<img src="/images/mood/ico-mood-2.gif" onclick="document.getElementById('msg').value+='{s:2}';" /> 
+				<img src="/images/mood/ico-mood-3.gif" onclick="document.getElementById('msg').value+='{s:3}';" /> 
+				<img src="/images/mood/ico-mood-4.gif" onclick="document.getElementById('msg').value+='{s:4}';" /> 
+				<img src="/images/mood/ico-mood-5.gif" onclick="document.getElementById('msg').value+='{s:5}';" /> 
+				<img src="/images/mood/ico-mood-6.gif" onclick="document.getElementById('msg').value+='{s:6}';" /> 
+				<img src="/images/mood/ico-mood-7.gif" onclick="document.getElementById('msg').value+='{s:7}';" /> 
+				<img src="/images/mood/ico-mood-8.gif" onclick="document.getElementById('msg').value+='{s:8}';" /> 
+			</div>
+			<!-- /dcmp-mood -->
+			<style>
+				.dcmp-mood{overflow:hidden;}
+				.dcmp-mood>ul>li{float:left;}
+				.mt1{background-color:rgba(255,255,255,.75);}
+				.dcmp-submit{margin-top:10px;text-align: center;}
+				.dcmp-submit button{display:inline-block;padding:10px 0;width:200px;border:none;border-radius:9px;background-color:#ff4200;color:#fff;text-align:center;font-size:16px;cursor:pointer;}
+				.dcmp-userinfo .info-item{display:inline-block;}
+				.dcmp-userinfo .info-item input{padding:4px 0;}
+				.comment-content >div:nth-of-type(2){color: red;}
+				.comment-area>ul>li:not(.bg-color){margin:0;padding:0;}
+			</style>
+
+			<!-- /dcmp-content -->
+			<!--未登陆-->
+			<div class="dcmp-post">
+				<div class="dcmp-userinfo" id="_ajax_feedback">
+					<div class="info-item">
+						<label>用户名:<input type="text" name="username" class="ipt-txt"></label>
+					</div>
+                    <div class="info-item">
+                    	<label>验证码:<input type="text" name="validate" class="ipt-txt" style="text-transform:uppercase;"></label>
+                    	<img src= "/include/vdimgck.php" id="validateimg" style="cursor:pointer" onclick="this.src=this.src+'?'" title="点击我更换图片" alt="点击我更换图片" />
+    	                <label for="dcmp-submit-guest" /><input type="checkbox" name="notuser" id="dcmp-submit-guest">
+    	                匿名? </label>
+                    </div>
+				</div>
+                
+				<div class="dcmp-submit">
+					<button type="button" onClick='PostComment()'>发表评论</button>
+				</div>
+			</div>
+        </form>
+		</div>
+		</dd>
+		</dl>
+	</div><!-- //评论表单区结束 -->
+
+<!-- //评论内容区 -->
+	<a name='commettop'></a>
+	<div class="mt1">
+			<dl class="tbox">
+				<dt>
+					<strong>最新评论</strong>
+					
+				</dt>
+				<!-- //这两个ID的区块必须存在，否则JS会出错 -->
+				<dd id='commetcontentNew'></dd>
+				<dd id='commetcontent'></dd>
+			</dl>
+	</div>
+<!--
+//由于评论载入时使用异步传输，因此必须在最后一步加载（DIGG和评论框须放在评论内容前面）
+//如果一定需要提前的把myajax.SendGet改为myajax.SendGet2，但可能会引起页面阻滞
+-->
+<script language='javascript'>
+function LoadCommets(page)
+{
+		var taget_obj = document.getElementById('commetcontent');
+		var waithtml = "<div style='line-height:50px'><img src='/images/loadinglit.gif' />评论加载中...</div>";
+		var myajax = new DedeAjax(taget_obj, true, true, '', 'x', waithtml);
+		myajax.SendGet2("/plus/feedback_ajax.php?dopost=getlist&aid=26&page="+page);
+		DedeXHTTP = null;
+}
+function PostComment()
+{
+		var f = document.feedback;
+		var nface = '6';
+		var nfeedbacktype = 'feedback';
+		var nvalidate = '';
+		var nnotuser = '';
+		var nusername = '';
+		var npwd = '';
+		var taget_obj = $DE('commetcontentNew');
+		var waithtml = "<div style='line-height:30px'><img src='/images/loadinglit.gif' />正在发送中...</div>";
+		if(f.msg.value=='')
+		{
+			alert("评论内容不能为空！");
+			return;
+		}
+		if(f.validate)
+		{
+			if(f.validate.value=='') {
+				alert("请填写验证码！");
+				return;
+			}
+			else {
+				nvalidate = f.validate.value;
+			}
+		}
+		if(f.msg.value.length > 500)
+		{
+			alert("你的评论是不是太长了？请填写500字以内的评论。");
+			return;
+		}
+		if(f.feedbacktype) {
+			for(var i=0; i < f.feedbacktype.length; i++)
+				if(f.feedbacktype[i].checked) nfeedbacktype = f.feedbacktype[i].value;
+		}
+		if(f.face) {
+			for(var j=0; j < f.face.length; j++)
+				if(f.face[j].checked) nface = f.face[j].value;
+		}
+		if(f.notuser.checked) nnotuser = '1';
+		if(f.username) nusername = f.username.value;
+		if(f.pwd) npwd = f.pwd.value;
+		
+		var myajax = new DedeAjax(taget_obj, false, true, '', '', waithtml);
+		myajax.sendlang = 'utf-8';
+		myajax.AddKeyN('dopost', 'send');
+		myajax.AddKeyN('aid', '26');
+		myajax.AddKeyN('fid', f.fid.value);
+		myajax.AddKeyN('face', nface);
+		myajax.AddKeyN('feedbacktype', nfeedbacktype);
+		myajax.AddKeyN('validate', nvalidate);
+		myajax.AddKeyN('notuser', nnotuser);
+		myajax.AddKeyN('username', nusername);
+		myajax.AddKeyN('pwd', npwd);
+		myajax.AddKeyN('msg', f.msg.value);
+		myajax.SendPost2('/plus/feedback_ajax.php');
+		f.msg.value = '';
+		f.fid.value = 0;
+		if(f.validate)
+		{
+			if($DE('validateimg')) $DE('validateimg').src = "/include/vdimgck.php?"+f.validate.value;
+			f.validate.value = '';
+		}
+}
+
+function ajaxFeedback(aid, fid, type)
+{
+	
+	var taget_obj = $DE('ajaxfeedback_'+fid);
+	if(taget_obj.innerHTML == '')
+	{
+		var myajax = new DedeAjax(taget_obj, true, true, '', 'x');
+		myajax.SendGet2("/plus/feedback.php?aid="+aid+"&fid="+fid+"&action=quote&type=ajax");
+		eval('var result = typeof CKEDITOR.instances.msg_'+fid);
+		if(result != 'undefined')
+		{
+			// 删除实例
+			eval('var edit = CKEDITOR.instances.msg_'+fid);
+			CKEDITOR.remove(edit);
+		}
+		CKEDITOR.replace(document.getElementById('msg_'+fid) , CKEDITOR.instances.msg.config);
+		scroll(0, taget_obj.offsetTop - 120);
+		var formname = 'f = document.ajaxfeedback_'+fid;
+		eval(formname);
+		if(f.validate)
+		{
+			if($DE('vdimg_'+fid)) $DE('vdimg_'+fid).src = "/include/vdimgck.php?"+f.validate.value;
+			f.validate.value = '';
+		}
+		
+		DedeXHTTP = null;
+	}
+}
+
+function ajaxQuotePost(fid)
+{
+	var formname = 'f = document.ajaxfeedback_'+fid;
+	eval(formname);
+	//var f = document.formname;
+	//var f = f[0];
+	var nvalidate = '';
+	var nnotuser = '';
+	var nusername = '';
+	var npwd = '';
+	var taget_obj = $DE('commetcontentNew');
+	var waithtml = "<div style='line-height:30px'><img src='/images/loadinglit.gif' />正在发送中...</div>";
+	eval('var msg = CKEDITOR.instances.msg_'+fid+'.getData()');
+
+	if(f.validate)
+	{
+		if(f.validate.value=='') {
+			alert("请填写验证码！");
+			return;
+		}
+		else {
+			nvalidate = f.validate.value;
+		}
+	}
+	var myajax = new DedeAjax(taget_obj, false, true, '', '', waithtml);
+	
+	if(f.notuser.checked) nnotuser = '1';
+	if(f.username) nusername = f.username.value;
+	if(f.pwd) npwd = f.pwd.value;
+	
+	myajax.sendlang = 'utf-8';
+	myajax.AddKeyN('dopost', 'send');
+	myajax.AddKeyN('aid', '26');
+	myajax.AddKeyN('fid', f.fid.value);
+	myajax.AddKeyN('type', 'ajax');
+	myajax.AddKeyN('comtype', f.comtype.value);
+	myajax.AddKeyN('isconfirm','yes');
+	
+	myajax.AddKeyN('typeid', f.typeid.value);
+	myajax.AddKeyN('quotemsg', f.quotemsg.value);
+	myajax.AddKeyN('validate', nvalidate);
+	myajax.AddKeyN('notuser', nnotuser);
+	myajax.AddKeyN('username', nusername);
+	myajax.AddKeyN('pwd', npwd);
+	myajax.AddKeyN('msg', msg);
+	myajax.SendPost2('/plus/feedback_ajax.php');
+	//alert(f.quotemsg.value);
+	if($DE('ajaxfeedback_'+fid).innerHTML != null)
+	{
+		$DE('ajaxfeedback_'+fid).innerHTML = '';
+	}
+	scroll(0, taget_obj.offsetTop);
+}
+
+function quoteCommet(fid)
+{
+	document.feedback.fid.value = fid;
+}
+LoadCommets(1);
+</script>
+<!-- //评论内容区结束 -->
+
+
+</section>
+
+<!--左侧结束-->
+
+<!-- 右侧 -->
+<aside class="myaside">
+
+<!--关注我-->
+
+<div class="focus-me bg-color animation-div">
+
+	<h4 class="index-title"><i class="el-heart"></i>关注我<small>Focus Me</small></h4>
+
+		<div class="xiangguan">
+
+				<div><a class="benbo" href="//weibo.com/andywenming" rel="nofollow" target="_blank"><i class="el el-rss"></i></a><span>新浪微博</span></div>
+				
+				<div><a class="taobao" href="https://github.com/andywenming"  rel="nofollow" target="_blank"><i class="el el-github"></i></a><span>github</span></div>
+
+				<div><a class="side-fx"><i class="el-share-alt"></i></a><span>分享本博</span></div>
+
+				<div><a class="mail-btn" href="javascript:;"><i class="el el-picasa"></i></a><span>公众号</span></div>
+
+		</div>
+
+
+		<div class="mail-dy">
+
+			<img src="http://www.d163.net/static/andy/images/icon/weixin.jpg">
+			<i class="el-remove fx-close"></i>
+
+		</div>
+
+		<div class="bd-fx side-bdfx ">
+
+			<i class="el-remove fx-close"></i>
+
+			<ul class="bdsharebuttonbox">
+
+				<li><a href="###" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></li>
+
+				<li><a href="###" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a></li>
+
+				<li><a href="###" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a></li>
+
+				<li><a href="###" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a></li>
+
+			</ul>
+
+			<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"32"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+		</div>
+
+</div>
+
+<!--右侧个人统计-->
+
+<div class="web-author bg-color animation-div">
+
+		<div class="author-tx">
+
+			<a class="img-circle" href="about.html" title="点击查看详细信息">
+
+				<img class="img-circle" src="http://www.d163.net/static/andy/images/icon/ava.jpg"/>
+
+			</a>
+
+		</div>
+
+		<div class="author-name"><span class="blue-text">仔仔</span><p>一位80后全栈开发站长</p></div>
+
+		<div class="data-info">
+
+			<ul>
+
+				<li><strong>5</strong><span>今日会员</span></li>
+
+				<li><strong>274</strong><span>今日访问ip</span></li>
+
+				<!-- <li><strong>115</strong><span>文章数量</span></li> -->
+				<li><strong>130</strong><span>今日访客</span></li>
+
+			</ul>
+
+		</div>
+
+</div>
+
+<!--END 右侧个人统计-->
+
+<!--搜索-->
+
+<div class="search animation-div">
+
+	<form action="/plus/search.php" >
+	<input type="hidden" name="kwtype" value="0" />
+
+		<div class="search-index">
+
+			<input name="q" type="text"  placeholder="请输入关键字" onfocus="this.placeholder=''" onblur="this.placeholder='请输入关键字'"/>
+
+			<i class="el-search"><input value=" " type="submit" ></i>
+
+		</div>
+
+	</form>
+
+</div>
+<!-- //搜索 -->
+
+
+
+<!--最新更新-->
+<div class="clos-new bg-color animation-div">
+
+	<h4 class="index-title"><i class="el-bulb"></i>最新更新<small>Close New</small></h4>
+
+	<ul>
+
+	<li><i class="el-cloud"></i><iframe id="tianqi"  scrolling="no" frameborder="0" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code&id=34&icon=1&num=3"></iframe></li>
+
+	<li><span><i class="el-arrow-up"></i>最近：<font class="blue-text">仔仔</font> 05-11 16:35</span><a title="layui中使用form表单监听ajax异步验证注册" > 更新了<b class="lable">文章</b></a></li>
+
+	<li><i class="el-calendar"></i>开发动态：<a title="支付宝支付"  href="###" class="orange-text" target="_blank"><b class="lable">支付宝捐赠</b></a></li>
+
+	</ul>
+
+</div>
+
+<!--说说-->
+<div class="bg-color animation-div">
+	<h4 class="index-title"><i class="el-headphones"></i>说说<small>Shuo Shuo</small></h4>
+	<div class="shuo-side">
+		<ul>
+		<li id="Hots">
+				<span class="shuobg1"><strong>05-26</strong></span>
+				<div><a title="很久没有去电影院看电影了！" href="/html/shuoshuo/21.html" >很久没有去电影院看电影了！</a><b title="点击182">(182)</b></div>
+			</li>
+<li id="Hots">
+				<span class="shuobg1"><strong>05-22</strong></span>
+				<div><a title="梦想还是要有的，万一实现了呢。" href="/html/shuoshuo/17.html" >梦想还是要有的，万一实现了呢。</a><b title="点击135">(135)</b></div>
+			</li>
+
+
+		</ul>
+	</div>
+</div>
+
+<!--推荐图文-->
+<div class="article-push  bg-color animation-div">
+	<h4 class="index-title"><i class="el-asl"></i>推荐图文<small>Push Article</small></h4>
+	<ul>
+	<li>
+			<div class="arcimg img_loading">
+				<a href="/html/xs/5.html">
+          <img src="/uploads/allimg/180518/1-1P51P052590-L.jpg" alt="我们共有过去，却各有未来" title="我们共有过去，却各有未来">
+        </a>
+			</div>
+			<div class="arc-right">
+				<h4 class="blue-text"><a href="/html/xs/5.html">我们共有过去，却各有未来</a></h4>
+				<p>一个小假期，刘若英导演的《后来的我们》像坐了趟过山车。预售破亿创纪录，首映日却爆出退票风波。 作为观众，我多少</p>
+				<ul>
+					<li><a title="发表于18-05-18"><i class="el-time"></i>2018-05-18</a></li>
+					<li><a title="117次浏览"><i class="el-fire"></i>117</a></li>
+				</ul>
+			</div>
+		</li>
+<li>
+			<div class="arcimg img_loading">
+				<a href="/html/xs/4.html">
+          <img src="/uploads/allimg/180517/1-1P51H352270-L.jpg" alt="一个人的旅途" title="一个人的旅途">
+        </a>
+			</div>
+			<div class="arc-right">
+				<h4 class="blue-text"><a href="/html/xs/4.html">一个人的旅途</a></h4>
+				<p>旅行的意义是什么，我想就是给自己一个完全放松的机会。 旅行和旅游应该是完全不一样的概念。 旅游或许是为了看这世界</p>
+				<ul>
+					<li><a title="发表于18-05-17"><i class="el-time"></i>2018-05-17</a></li>
+					<li><a title="80次浏览"><i class="el-fire"></i>80</a></li>
+				</ul>
+			</div>
+		</li>
+
+		
+		</ul>
+</div>
+
+<!--文章排行tab-->
+<div class="mytab bg-color animation-div">
+	<div class="tab-btn"><a class="hd-btn tab-active" href="javascript:;"><i class="el-comment-alt"></i>留言评论</a><a class="ph-btn" href="javascript:;"><i class="el-signal"></i>文章排行</a></div>
+	<ul class="hudong-ul" id="hudong-ul">
+
+	<li>
+				<div class="sd-tx">
+				<a href="###" rel="nofollow" title="">
+						<img src="/plus/guestbook/images/01.gif" alt="仔仔2" class="img-circle"/>
+				</a>
+				</div>
+				<div class="sd-name">
+					<span><i class="el-user"></i>仔仔2<time >2018-05-30</time></span>
+					<a class="blue-text" href="###" title="回复：回复：俊仔到此一游" >回复：回复：俊仔到此一游</a>
+				</div>
+			</li><li>
+				<div class="sd-tx">
+				<a href="###" rel="nofollow" title="">
+						<img src="/plus/guestbook/images/01.gif" alt="赵本三" class="img-circle"/>
+				</a>
+				</div>
+				<div class="sd-name">
+					<span><i class="el-user"></i>赵本三<time >2018-05-30</time></span>
+					<a class="blue-text" href="###" title="回复：俊仔到此一游" >回复：俊仔到此一游</a>
+				</div>
+			</li><li>
+				<div class="sd-tx">
+				<a href="###" rel="nofollow" title="">
+						<img src="/plus/guestbook/images/14.gif" alt="无情" class="img-circle"/>
+				</a>
+				</div>
+				<div class="sd-name">
+					<span><i class="el-user"></i>无情<time >2018-05-25</time></span>
+					<a class="blue-text" href="###" title="网站加载有点慢哦" >网站加载有点慢哦</a>
+				</div>
+			</li><li>
+				<div class="sd-tx">
+				<a href="###" rel="nofollow" title="">
+						<img src="/plus/guestbook/images/15.gif" alt="刘凯桐" class="img-circle"/>
+				</a>
+				</div>
+				<div class="sd-name">
+					<span><i class="el-user"></i>刘凯桐<time >2018-05-25</time></span>
+					<a class="blue-text" href="###" title="长夜漫漫" >长夜漫漫</a>
+				</div>
+			</li><li>
+				<div class="sd-tx">
+				<a href="###" rel="nofollow" title="">
+						<img src="/plus/guestbook/images/01.gif" alt="郭哥" class="img-circle"/>
+				</a>
+				</div>
+				<div class="sd-name">
+					<span><i class="el-user"></i>郭哥<time >2018-05-25</time></span>
+					<a class="blue-text" href="###" title="好吧，总算上线了" >好吧，总算上线了</a>
+				</div>
+			</li><li>
+				<div class="sd-tx">
+				<a href="###" rel="nofollow" title="">
+						<img src="/plus/guestbook/images/01.gif" alt="俊仔" class="img-circle"/>
+				</a>
+				</div>
+				<div class="sd-name">
+					<span><i class="el-user"></i>俊仔<time >2018-05-24</time></span>
+					<a class="blue-text" href="###" title="俊仔到此一游" >俊仔到此一游</a>
+				</div>
+			</li>
+
+		</ul>
+
+	<!--文章排行-->
+	<ul class="paihang-ul">
+	<li><span></span><a href="/html/xs/22.html" title="两只蜗牛艰难又浪漫的一吻">两只蜗牛艰难又浪漫的一吻<b>(179)</b></a></li>
+<li><span></span><a href="/html/xs/20.html" title="反正我们不亏损了，所以可以任性一些">反正我们不亏损了，所以可以任性一些<b>(151)</b></a></li>
+<li><span></span><a href="/html/xs/18.html" title="听什么歌都像在唱自己？网易云音乐乐评真的出书了，打开瞬间泪奔">听什么歌都像在唱自己？网易云音乐乐评真的出书了，打开瞬间泪奔<b>(149)</b></a></li>
+<li><span></span><a href="/html/xs/5.html" title="我们共有过去，却各有未来">我们共有过去，却各有未来<b>(117)</b></a></li>
+<li><span></span><a href="/html/xs/19.html" title="那一只拯救世界的猴子">那一只拯救世界的猴子<b>(102)</b></a></li>
+
+	</ul>
+
+	</div>
+
+<!--标签-->
+	<div class="cloud bg-color animation-div">
+	    <h4 class="index-title"><i class="el-tags"></i>标签云<small>Tags Clouds</small></h4>
+		<ul id="3dcloud">
+		
+		<li>
+		<a style="font-size:12.386836321453px;color:#c78514"  class="tstyle-1" href="/tags.php?/%E4%BA%BA%E7%94%9F%E8%AF%AD%E5%BD%95/" title="人生语录(1)" >人生语录 (1)</a>
+		</li>
+		
+		<li>
+		<a style="font-size:14.176282708307px;color:#5a15fe"  class="tstyle-1" href="/tags.php?/dedecms/" title="dedecms(3)" >dedecms (3)</a>
+		</li>
+		
+		<li>
+		<a style="font-size:16.874297826289px;color:#b5a6b6"  class="tstyle-1" href="/tags.php?/HTML/" title="HTML(1)" >HTML (1)</a>
+		</li>
+		
+		</ul>
+	</div>
+</aside>
+<script>
+/*
+	$(function(){
+		$.ajax({
+			url:"/plus/guestbook_api.php",
+			type: "POST", 
+			dataType: "json",
+			success: function(data){
+				console.log(data);
+				var str = "";
+
+				var res = data.list;
+				console.log(res);
+				for (var i = 0; i < 5; i++) {
+					str +='<li>'+
+'			<div class="sd-tx">'+
+'			<a href="###" rel="nofollow" title="'+res[i].title+'">'+
+'					<img src="/plus/guestbook/images/'+res[i].face+'.gif"  class="img-circle"/>'+
+'			</a>'+
+'			</div>'+
+'			<div class="sd-name">'+
+'				<span><i class="el-user"></i>'+res[i].uname+'<time >'+res[i].dtime+'</time></span>'+
+'				<a class="blue-text" href="###" title="'+res[i].title+'" >'+res[i].title+'</a>'+
+'			</div>'+
+'		</li>';
+
+				}
+				$("#hudong-ul").html(str);
+			}
+		})
+	})
+*/
+</script>
+
+<!-- //右侧 -->
+
+</div>
+
+<!--主题框架结束-->
+
+<!---底部开始-->
+<footer>
+	<div class="footer-area">
+	<!--博客相关-->
+	<div class="about-blog">
+		<h4>素材排行</h4>
+		<div class="ft-part1">
+					<!--素材排行-->
+				<ul class="paihang-ul" style="display:block;width:100%;">
+				<li>
+					<span></span><a href="/html/web2/2.html" title="奇怪这个为什么不显示"> 奇怪这个为什么不显示<b>(191)</b></a>
+					</li>
+<li>
+					<span></span><a href="/html/shuoshuo/21.html" title="很久没有去电影院看电影了！"> 很久没有去电影院看电影了！<b>(182)</b></a>
+					</li>
+<li>
+					<span></span><a href="/html/xs/22.html" title="两只蜗牛艰难又浪漫的一吻"> 两只蜗牛艰难又浪漫的一吻<b>(179)</b></a>
+					</li>
+<li>
+					<span></span><a href="/html/web2/27.html" title="7种css设置div居中的方法,完美解决"> 7种css设置div居中的方法,完美解决<b>(165)</b></a>
+					</li>
+<li>
+					<span></span><a href="/html/xs/20.html" title="反正我们不亏损了，所以可以任性"> 反正我们不亏损了，所以可以任性<b>(151)</b></a>
+					</li>
+
+				</ul>
+		</div>
+	</div>
+
+	<!--最新留言-->
+	<div class="close-fd mob-hidden">
+		 <h4>留言频道</h4>
+		<ul>
+		<li>
+			<div class="sd-tx">
+				<a href="/plus/guestbook.php" rel="nofollow" title="去留言板看看?">
+
+					<img src="/plus/guestbook/images/01.gif" class="img-circle">
+				</a>
+			</div>
+			<div class="sd-name">
+				<span>仔仔2</span>
+				<a class="blue-text" href="/plus/guestbook.php" title="回复：回复：俊仔到此一游">回复：回复：俊仔到此一游</a>
+			</div>
+			</li><li>
+			<div class="sd-tx">
+				<a href="/plus/guestbook.php" rel="nofollow" title="去留言板看看?">
+
+					<img src="/plus/guestbook/images/01.gif" class="img-circle">
+				</a>
+			</div>
+			<div class="sd-name">
+				<span>赵本三</span>
+				<a class="blue-text" href="/plus/guestbook.php" title="回复：俊仔到此一游">回复：俊仔到此一游</a>
+			</div>
+			</li><li>
+			<div class="sd-tx">
+				<a href="/plus/guestbook.php" rel="nofollow" title="去留言板看看?">
+
+					<img src="/plus/guestbook/images/14.gif" class="img-circle">
+				</a>
+			</div>
+			<div class="sd-name">
+				<span>无情</span>
+				<a class="blue-text" href="/plus/guestbook.php" title="网站加载有点慢哦">网站加载有点慢哦</a>
+			</div>
+			</li>
+			</ul>
+	</div>
+
+
+
+	<!--图文频道-->
+
+	<div class="tuwen-pd mob-hidden">
+		<h4>博主相册</h4>
+		<ul>
+		
+		<li><a title='杨青个人博客' href='http://www.yangqq.com/' target='_blank'><img alt='杨青个人博客' src='/uploads/frdimg/1805281930522054.jpg' width='88' height='31' border='0'></a> </li>
+		
+		<li><a title='卢松松博客' href='http://lusongsong.com/' target='_blank'><img alt='卢松松博客' src='/uploads/frdimg/1805281954327225.jpg' width='88' height='31' border='0'></a> </li>
+		
+		</ul>
+	</div>
+		<!--数据统计-->
+
+	<div class="data-count ">
+
+		<h4>数据统计</h4>
+
+		<ul>
+
+
+			<li><span><i class="el-picture"></i>图片数量：</span><a title="共有 21 张图片">21</a> 张</li>
+
+			<li><span><i class="el-headphones"></i>说说数量：</span><a title="共有 62 条说说">62</a> 条</li>
+
+			<li><span><i class="el-pencil"></i>文章数量：</span><a title="共有16篇文章">16</a> 篇</li>
+
+			<li><span><i class="el-comment"></i>留言数量：</span><a title="共有 15 条留言">15</a> 条</li>
+
+			<li><span><i class="el-comment-alt"></i>评论数量：</span><a title="共有 7 条评论">7</a> 条</li>
+
+			<li><span><i class="el-paper-clip"></i>素材个数：</span><a title="共有 24 个">24</a> 个</li>
+
+			<li><span><i class="el-cog"></i>运行天数：</span><a id="show_date_time" title=""></a> 天</li>
+
+
+
+			<li><span><i class="el-adjust-alt"></i>访问统计：</span><a title="累计访问"></a> 次</li>
+
+
+
+			<!--<li><span><i class="el-arrow-up"></i>4天前 12:15</span><a title="晓晓 最后更新了文章" >更新了<b class="lable">文章</b></a></li>-->
+
+
+
+		</ul>
+
+	</div>
+
+
+
+	</div>
+
+	<!--底部导航-->
+
+	<div class="foot-nav">
+
+		<div class="copy-right"><span>CopyRight © 2015-2017 郭文明博客  Design by Andy</span></div>
+
+		<div class="bottom-nav">
+
+			<span><a href="/sitemap.html" target="_blank">网站地图</a>-<a target="_blank" href="http://www.miitbeian.gov.cn/"> 粤ICP备16001325号-1</a></span>
+
+		</div>
+
+	</div>
+
+<div id="toTop">Back to Top</div>
+
+<script>
+
+window.onload=function(){
+
+	$(".img_loading").removeClass("img_loading");
+
+	$(".silde-title").show();
+
+}
+
+</script>
+<script>
+// 网站运行天数
+$(function(){
+	var s1 = '2017-05-24';//设置为你的建站时间 
+	s1 = new Date(s1.replace(/-/g, "/")); 
+	s2 = new Date(); 
+	var days = s2.getTime() - s1.getTime(); 
+	var number_of_days = parseInt(days / (1000 * 60 * 60 * 24)); 
+	var $showtime = $("#show_date_time");
+	$showtime.text(number_of_days).attr('title','仔仔博客已正常运行'+number_of_days+'天');
+
+})
+</script>	
+</footer>
+<!-- 换肤 -->
+<!--
+
+
+<div class="select-skin">
+
+<div class="skin-btn">
+
+    <a href="javascript:void(0);" class="skin-btn-open">换<br>肤</a>
+
+</div>
+
+
+
+<div class="skin-content">
+
+    <h1>选择风格<span class="skin-close">关闭</span></h1>
+
+    <div class="skin-content-list">
+
+        <div class="skin-list"><a href="#" onclick="setActiveStyleSheet('qingxin'); return false;" class="btn1">清新</a></div>
+
+        <div class="skin-list"><a href="#" onclick="setActiveStyleSheet('jianyue'); return false;" class="btn2">简约</a></div>
+
+		 <div class="skin-list"><a href="#" onclick="setActiveStyleSheet('qingshuang'); return false;" class="btn3">清爽</a></div>
+
+    </div>
+
+</div>
+
+</div>
+
+-->
+
+
+
+<!---END 底部开始-->
+
+    <div class="hide_box"></div>
+
+    <div class="shang_box">
+
+    	<a class="shang_close" href="javascript:void(0)" onclick="dashangToggle()" title="关闭"><img src="http://www.d163.net/static/andy/images/icon/close.jpg" alt="取消"></a>
+
+        <img class="shang_logo" src="http://www.d163.net/static/andy/images/logo2.png" alt="仔仔">
+
+    	<div class="shang_tit">
+
+    		<p><a title="支付宝支付" href="###" class="orange-text" target="_blank">支付宝在线支付</a></p>
+
+    	</div>
+
+    	<div class="shang_payimg">
+
+    		<img src="http://www.d163.net/static/andy/images/alipayimg.jpg" alt="扫码查看" title="扫一扫">
+
+    	</div>
+
+
+
+    		<div class="pay_explain">1元=1金币，支付后关注公众号联系站长</div>
+
+
+
+    	<div class="shang_payselect">
+
+    		<div class="pay_item checked" data-id="alipay">
+
+	    		<span class="radiobox"></span>
+
+	    		<span class="pay_logo"><img src="http://www.d163.net/static/andy/images/icon/alipay.jpg" alt="支付宝"></span>
+
+    		</div>
+
+    		<div class="pay_item" data-id="weipay">
+
+	    		<span class="radiobox"></span>
+
+	    		<span class="pay_logo"><img src="http://www.d163.net/static/andy/images/icon/wechat.jpg" alt="微信"></span>
+
+    		</div>
+
+    	</div>
+
+    </div>
+
+ <!-- 手机端 -->
+ <div class="shang_box_wap">
+
+   <a class="shang_close" href="javascript:void(0)" onclick="dashangToggle()" title="关闭"><img src="http://www.d163.net/static/andy/images/icon/close.jpg" alt="取消"></a>
+   <div class="shang_tit">
+
+     <p>感谢您的支持，我会继续努力的!</p>
+
+   </div>
+
+   <div class="shang_payimg">
+
+     <img src="http://www.d163.net/static/andy/images/alipayimg.jpg" alt="扫码查看" title="扫一扫">
+
+   </div>
+
+
+     <div class="pay_explain">长按二维码打赏，你说多少就多少</div>
+
+
+   <div class="shang_payselect">
+
+     <div class="pay_item checked" data-id="alipay">
+
+       <span class="radiobox"></span>
+
+       <span class="pay_logo"><img src="http://www.d163.net/static/andy/images/icon/alipay.jpg" alt="支付宝"></span>
+
+     </div>
+
+     <div class="pay_item" data-id="weipay">
+
+       <span class="radiobox"></span>
+
+       <span class="pay_logo"><img src="http://www.d163.net/static/andy/images/icon/wechat.jpg" alt="微信"></span>
+
+     </div>
+
+   </div>
+
+ </div>
+<!-- 手机端end -->
+    <script type="text/javascript">
+
+    $(function(){
+
+    	$(".pay_item").click(function(){
+
+    		$(this).addClass('checked').siblings('.pay_item').removeClass('checked');
+
+    		var dataid=$(this).attr('data-id');
+
+    		$(".shang_payimg img").attr("src","http://www.d163.net/static/andy/images/icon/"+dataid+"img.jpg");
+
+    		$("#shang_pay_txt").text(dataid=="alipay"?"支付宝":"微信");
+
+    	});
+
+    });
+
+    function dashangToggle(){
+
+    	$(".hide_box").fadeToggle();
+      var is_pc=IsPC();
+      if(is_pc==true){
+        $(".shang_box").fadeToggle();
+      }else{
+         $(".shang_box_wap").fadeToggle();
+      }
+    }
+    // 判断是不是手机端
+    function IsPC() {
+        var userAgentInfo = navigator.userAgent;
+        var Agents = ["Android", "iPhone",
+                    "SymbianOS", "Windows Phone",
+                    "iPad", "iPod"];
+        var flag = true;
+        for (var v = 0; v < Agents.length; v++) {
+            if (userAgentInfo.indexOf(Agents[v]) > 0) {
+                flag = false;
+                break;
+            }
+        }
+        return flag;
+    }
+    </script>
+
+<script type="text/javascript">
+function dashangToggle2(){
+  $(".hide_box2").fadeToggle();
+  $(".shang_box2").fadeToggle();
+}
+</script>
+
+<script>
+//判断是不是手机端
+function IsPC() {
+    var userAgentInfo = navigator.userAgent;
+    var Agents = ["Android", "iPhone",
+                "SymbianOS", "Windows Phone",
+                "iPad", "iPod"];
+    var flag = true;
+    for (var v = 0; v < Agents.length; v++) {
+        if (userAgentInfo.indexOf(Agents[v]) > 0) {
+            flag = false;
+            break;
+        }
+    }
+    return flag;
+}
+var is_pc=IsPC();
+if(is_pc==false){
+	 $("#authorad").css('display','none');
+}
+</script>
+
+</body>
+</html>
